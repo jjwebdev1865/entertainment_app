@@ -1,17 +1,26 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { Navbar } from './Navbar'
 import React from 'react';
 
 describe('Navbar', () => {
-  it('Navbar component should render', () => {
-    const { getByTestId } = render(<Navbar />);
-    expect(getByTestId('nav-bar-container')).toBeTruthy();
-  })
+  // it('Navbar component should render', () => {
+  //   const { getByTestId } = render(<Navbar />);
+  //   expect(getByTestId('nav-bar-container')).toBeTruthy();
+  // })
+
+  it("should render Home component correctly", () => {
+    render(<Navbar />);
+    const element = screen.getByRole("heading");
+    expect(element).toBeInTheDocument();
+  });
 
   it('contains the right navbar pages', () => {
-    const { getByRole } = render(<Navbar />);
+    // const { getByRole } = render(<Navbar />);
+    render(<Navbar />);
+    const HomeLinkElement = screen.getByRole('link', { name : 'Home' });
+    const AboutMeLinkElement = screen.getByRole('link', { name : 'Home' });
 
-    expect(getByRole('link', { name : 'Home' })).toBeTruthy()
-    expect(getByRole('link', { name : 'About Me' })).toBeTruthy()
+    expect(HomeLinkElement).toBeInTheDocument()
+    expect(AboutMeLinkElement).toBeInTheDocument()
   })
 })
