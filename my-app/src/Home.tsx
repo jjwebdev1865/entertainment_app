@@ -4,7 +4,7 @@ const Home = () => {
   
   return (
     <div>
-      <h1>Home</h1>
+      <h1 data-testid='home-header'>Home</h1>
     </div>
   )
 }
