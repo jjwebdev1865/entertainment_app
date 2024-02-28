@@ -8,13 +8,17 @@ const StyledFavoritesTile = styled.li`
 type FavoritesTileProps = {
   title: string;
   id: string;
+  poster: any;
 }
 
 export const FavoritesTile = (props: FavoritesTileProps): JSX.Element => {
-  const { title, id } = props
+  const { title, id , poster} = props
   return (
-    <StyledFavoritesTile data-testid={`favorites-tile-${id}`}>
-      {title}
-    </StyledFavoritesTile>
+    <>
+      <StyledFavoritesTile data-testid={`favorites-tile-${id}`}>
+      <img src={poster} alt={title} />
+      </StyledFavoritesTile>
+    </>
+
   )
 }

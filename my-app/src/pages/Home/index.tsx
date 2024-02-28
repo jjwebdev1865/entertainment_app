@@ -10,7 +10,7 @@ const StyledFavorites = styled.ul`
 
 const Home = (): JSX.Element => {
   const favorites = getFavorites(movies)
-  
+
   return (
     <div>
       <h1 data-testid='home-header'>Home</h1>
@@ -21,7 +21,7 @@ const Home = (): JSX.Element => {
         <StyledFavorites>
           {favorites.map(item => {
             return (
-              <FavoritesTile title={item.title} id={item.id} />
+              <FavoritesTile title={item.title} id={item.id} poster={item.poster} />
             )
           })}
         </StyledFavorites>
