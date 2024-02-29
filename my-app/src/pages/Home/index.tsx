@@ -21,7 +21,7 @@ const Home = (): JSX.Element => {
         <StyledFavorites>
           {favorites.map(item => {
             return (
-              <FavoritesTile title={item.title} id={item.id} poster={item.poster} />
+              <FavoritesTile key={`favorite-movie-${item.id}`} title={item.title} id={item.id} />
             )
           })}
         </StyledFavorites>
