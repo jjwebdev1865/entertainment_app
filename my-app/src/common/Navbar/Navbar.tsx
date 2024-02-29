@@ -12,6 +12,9 @@ export const Navbar = () => {
             <li>
               <a href='/about-me'>About Me</a>
             </li>
+            <li>
+              <a href='/movies'>Movies</a>
+            </li>
           </ul>
         </nav>
       </div>

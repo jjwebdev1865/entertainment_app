@@ -2,12 +2,11 @@ import { FavoritesTile } from './FavoritesTile'
 import React from 'react'
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom'
-import { anyoneButYouImage } from '../../assets/images/images';
 
 
 describe('FavoriteTile', () => {
   it("should render Home component correctly", () => {
-    render(<FavoritesTile title='My Favorite' id='my-favorite' poster={anyoneButYouImage} />);
+    render(<FavoritesTile title='My Favorite' id='my-favorite'  />);
     const element = screen.getByTestId('favorites-tile-my-favorite')
     expect(element).toBeInTheDocument();
   });
