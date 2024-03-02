@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
 import '@testing-library/jest-dom';
 import Movies from "./index";
@@ -25,6 +25,26 @@ describe("Movies", () => {
     expect(headingTwo).toBeVisible();
   })
 
+  describe('contains a filter section', () => {
+    it('has a filter section', () => {
+      render(<Movies />);
+      const element = screen.getByTestId('movie-search-section');
+      expect(element).toBeInTheDocument();
+    })
+
+    it('has a search bar', () => {
+      render(<Movies />);
+      const element = screen.getByTestId('search');
+      expect(element).toBeInTheDocument();
+    })
+
+    it('has a search button', () => {
+      render(<Movies />);
+      const element = screen.getByTestId('search-button');
+      expect(element).toBeInTheDocument();
+    })
+  })
+
   describe('contains movie section', () => {
     it("and renders section", () => {
       render(<Movies />);
@@ -35,6 +55,20 @@ describe("Movies", () => {
     it('renders a movie', () => {
       render(<Movies />);
       const movie = screen.getByTestId('movie-anyone-but-you')
+      expect(movie).toBeVisible();
+    })
+  })
+
+  describe('filter changes the movie list', () => {
+    it('filters when searching for dune', () => {
+      render(<Movies />);
+      const searchInput = screen.getByTestId('search');
+      fireEvent.change(searchInput, { target: { value: 'Dune' } });
+
+      const searchButton = screen.getByTestId('search-button');
+      fireEvent.click(searchButton)
+
+      const movie = screen.getByTestId('movie-dune')
       expect(movie).toBeVisible();
     })
   })
