@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Navbar } from '../../common'
+import { Navbar, SearchBar } from '../../common'
 import { getMovies } from '../../api/local_api/filter'
 import { Movie } from '../../models/types'
 import { StyledMovieItem, StyledMovieList, StyledPoster } from './index.styles'
@@ -16,8 +16,8 @@ const Movies = (): JSX.Element => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  let inputHandler = (e: any) => {
-    const lowerCaseSearch = e.target.value.toLowerCase();
+  let inputHandler = (event: any) => {
+    const lowerCaseSearch = event.target.value.toLowerCase();
     setSearchVal(lowerCaseSearch);
   };
 
@@ -39,11 +39,7 @@ const Movies = (): JSX.Element => {
       <hr />
       
       <h2>Movie list</h2>
-      <section data-testid='movie-search-section'>
-        <input data-testid='search' type="text" onChange={inputHandler} value={searchVal} />
-        <button data-testid='search-clear-button' onClick={() => handleClear()}>Clear</button>
-        <button data-testid='search-button' onClick={() => handleSearch(searchVal)}>Search</button>
-      </section>
+      <SearchBar searchVal={searchVal} inputHandler={inputHandler} handleClear={handleClear} handleSearch={handleSearch} />
 
       <section data-testid='movies-section'>
         <StyledMovieList data-testid='movies-list'>

@@ -25,26 +25,6 @@ describe("Movies", () => {
     expect(headingTwo).toBeVisible();
   })
 
-  describe('contains a filter section', () => {
-    it('has a filter section', () => {
-      render(<Movies />);
-      const element = screen.getByTestId('movie-search-section');
-      expect(element).toBeInTheDocument();
-    })
-
-    it('has a search bar', () => {
-      render(<Movies />);
-      const element = screen.getByTestId('search');
-      expect(element).toBeInTheDocument();
-    })
-
-    it('has a search button', () => {
-      render(<Movies />);
-      const element = screen.getByTestId('search-button');
-      expect(element).toBeInTheDocument();
-    })
-  })
-
   describe('contains movie section', () => {
     it("and renders section", () => {
       render(<Movies />);
