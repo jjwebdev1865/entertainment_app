@@ -4,8 +4,6 @@ import { getMovies } from '../../api/local_api/filter'
 import { Movie } from '../../models/types'
 import { StyledMovieItem, StyledMovieList, StyledPoster } from './index.styles'
 
-
-
 const Movies = (): JSX.Element => {
   const movies = getMovies()
   const [searchVal, setSearchVal] = useState("");
@@ -33,12 +31,9 @@ const Movies = (): JSX.Element => {
 
   return (
     <div data-testid='movies'>
-      <h1 data-testid='home-header'>Movies</h1>
       <Navbar />
-
-      <hr />
       
-      <h2>Movie list</h2>
+      <h1>Movies</h1>
       <SearchBar searchVal={searchVal} inputHandler={inputHandler} handleClear={handleClear} handleSearch={handleSearch} />
 
       <section data-testid='movies-section'>

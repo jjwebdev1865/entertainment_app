@@ -1,13 +1,11 @@
 import styled from "styled-components"
 
-// justify-content: space-between;
 export const StyledMovieList = styled.ul`
   list-style: none;
   display: flex;
   flex-wrap: wrap;
 
   height: 50%;
-
   column-gap: 2%;
 
   li {
