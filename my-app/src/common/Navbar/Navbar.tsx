@@ -15,6 +15,9 @@ export const Navbar = () => {
             <li>
               <a href='/movies'>Movies</a>
             </li>
+            <li>
+              <a href='/tv-shows'>Tv Shows</a>
+            </li>
           </ul>
         </nav>
       </div>

@@ -8,8 +8,12 @@ describe('Navbar', () => {
     render(<Navbar />);
     const HomeLinkElement = screen.getByRole('link', { name : 'Home' });
     const AboutMeLinkElement = screen.getByRole('link', { name : 'Home' });
+    const MoviesLinkElement = screen.getByRole('link', { name : 'Movies' });
+    const TvShowsLinkElement = screen.getByRole('link', { name : 'Tv Shows' });
 
     expect(HomeLinkElement).toBeInTheDocument()
     expect(AboutMeLinkElement).toBeInTheDocument()
+    expect(MoviesLinkElement).toBeInTheDocument()
+    expect(TvShowsLinkElement).toBeInTheDocument()
   })
 })

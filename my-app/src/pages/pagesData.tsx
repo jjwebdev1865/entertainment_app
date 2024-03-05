@@ -3,6 +3,7 @@ import { routerType } from "../types/router.types";
 import AboutMe from "./AboutMe";
 import Home from "./Home";
 import Movies from "./Movies";
+import TvShows from "./TvShows";
 
 const pagesData: routerType[] = [
   {
@@ -19,6 +20,11 @@ const pagesData: routerType[] = [
     path: 'movies',
     element: <Movies />,
     title: 'movies'
+  },
+  {
+    path: 'tv-shows',
+    element: <TvShows />,
+    title: 'tv shows'
   }
 ];
 
