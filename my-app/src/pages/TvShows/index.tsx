@@ -5,8 +5,8 @@ const TvShows = (): JSX.Element => {
   
   return (
     <div>
-      <h1 data-testid='tv-show-header'>TV Shows</h1>
       <Navbar />
+      <h1 data-testid='tv-show-header'>TV Shows</h1>
     </div>
   )
 }

@@ -5,8 +5,8 @@ const AboutMe = () => {
 
   return (
     <div>
-      <h1 data-testid='about-me-header'>About Me</h1>
       <Navbar />
+      <h1 data-testid='about-me-header'>About Me</h1>
     </div>
   )
 }

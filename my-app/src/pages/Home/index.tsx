@@ -13,8 +13,8 @@ const Home = (): JSX.Element => {
 
   return (
     <div>
-      <h1 data-testid='home-header'>Home</h1>
       <Navbar />
+      <h1 data-testid='home-header'>Home</h1>
 
       <div data-testid='favorites-container'>
         <h2 data-testid='favorites-header'>Favorites</h2>

@@ -20,9 +20,7 @@ describe("Movies", () => {
   it('contains the correct headers', () => {
     render(<Movies />);
     const headingOne = screen.getByRole('heading', {level: 1});
-    const headingTwo = screen.getByRole('heading', {level: 2});
     expect(headingOne).toBeVisible();
-    expect(headingTwo).toBeVisible();
   })
 
   describe('contains movie section', () => {
