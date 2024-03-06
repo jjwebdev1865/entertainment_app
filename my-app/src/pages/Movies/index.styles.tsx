@@ -20,3 +20,7 @@ export const StyledMovieItem = styled.li`
 export const StyledPoster = styled.img`
   width: 100%;
 `;
+
+export const StyledRatingDropdown = styled.div`
+  display: flex;
+`;

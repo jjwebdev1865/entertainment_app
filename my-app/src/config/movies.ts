@@ -12,6 +12,7 @@ export const movies: Movie[] = [
     rating: 'R',
     releaseYear: 2023,
     runTime: 103,
+    myRating: 8,
   },
   {
     favorite: false,
@@ -23,6 +24,7 @@ export const movies: Movie[] = [
     rating: 'PG-13',
     releaseYear: 2023,
     runTime: 124,
+    myRating: 3,
   },
   {
     favorite: false,
@@ -34,6 +36,7 @@ export const movies: Movie[] = [
     rating: 'PG-13',
     releaseYear: 2021,
     runTime: 155,
+    myRating: 9,
   },
   {
     favorite: false,
@@ -45,5 +48,6 @@ export const movies: Movie[] = [
     rating: 'PG',
     releaseYear: 2023,
     runTime: 116,
+    myRating: 8,
   },
 ];
