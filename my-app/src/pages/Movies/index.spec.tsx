@@ -4,7 +4,6 @@ import '@testing-library/jest-dom';
 import Movies from "./index";
 
 describe("Movies", () => {
-  
   it("should render Home component correctly", () => {
     render(<Movies />);
     const element = screen.getByTestId('movies');
@@ -21,7 +20,7 @@ describe("Movies", () => {
     render(<Movies />);
     const headingOne = screen.getByRole('heading', {level: 1});
     expect(headingOne).toBeVisible();
-  })
+  });
 
   describe('contains movie section', () => {
     it("and renders section", () => {
@@ -32,10 +31,10 @@ describe("Movies", () => {
 
     it('renders a movie', () => {
       render(<Movies />);
-      const movie = screen.getByTestId('movie-anyone-but-you')
+      const movie = screen.getByTestId('movie-anyone-but-you');
       expect(movie).toBeVisible();
-    })
-  })
+    });
+  });
 
   describe('filter changes the movie list', () => {
     it('filters when searching for dune', () => {
@@ -44,10 +43,10 @@ describe("Movies", () => {
       fireEvent.change(searchInput, { target: { value: 'Dune' } });
 
       const searchButton = screen.getByTestId('search-button');
-      fireEvent.click(searchButton)
+      fireEvent.click(searchButton);
 
-      const movie = screen.getByTestId('movie-dune')
+      const movie = screen.getByTestId('movie-dune');
       expect(movie).toBeVisible();
-    })
-  })
+    });
+  });
 });
