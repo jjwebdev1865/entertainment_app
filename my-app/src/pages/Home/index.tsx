@@ -14,14 +14,18 @@ const Home = (): JSX.Element => {
   return (
     <div>
       <Navbar />
-      <h1 data-testid='home-header'>Home</h1>
+      <h1 data-testid="home-header">Home</h1>
 
-      <div data-testid='favorites-container'>
-        <h2 data-testid='favorites-header'>Favorites</h2>
+      <div data-testid="favorites-container">
+        <h2 data-testid="favorites-header">Favorites</h2>
         <StyledFavorites>
-          {favorites.map(item => {
+          {favorites.map((item) => {
             return (
-              <FavoritesTile key={`favorite-movie-${item.id}`} title={item.title} id={item.id} />
+              <FavoritesTile
+                key={`favorite-movie-${item.id}`}
+                title={item.title}
+                id={item.id}
+              />
             );
           })}
         </StyledFavorites>

@@ -16,31 +16,39 @@ const StyledNavbar = styled.nav`
 
 export const Navbar = () => {
   return (
-    <StyledNavbar data-testid='nav-bar-container'>
-      <NavLink 
-        to='/' 
+    <StyledNavbar data-testid="nav-bar-container">
+      <NavLink
+        to="/"
         style={({ isActive }) => ({
-          color: isActive ? "#0000ff" : "#000000"
+          color: isActive ? '#0000ff' : '#000000',
         })}
-      >Home</NavLink>
-      <NavLink 
-        to='/about-me'
+      >
+        Home
+      </NavLink>
+      <NavLink
+        to="/about-me"
         style={({ isActive }) => ({
-          color: isActive ? "#0000ff" : "#000000"
+          color: isActive ? '#0000ff' : '#000000',
         })}
-      >About Me</NavLink>
-      <NavLink 
-        to='/movies'
+      >
+        About Me
+      </NavLink>
+      <NavLink
+        to="/movies"
         style={({ isActive }) => ({
-          color: isActive ? "#0000ff" : "#000000"
+          color: isActive ? '#0000ff' : '#000000',
         })}
-      >Movies</NavLink>
-      <NavLink 
-        to='/tv-shows'
+      >
+        Movies
+      </NavLink>
+      <NavLink
+        to="/tv-shows"
         style={({ isActive }) => ({
-          color: isActive ? "#0000ff" : "#000000"
+          color: isActive ? '#0000ff' : '#000000',
         })}
-      >TV Shows</NavLink>
+      >
+        TV Shows
+      </NavLink>
     </StyledNavbar>
   );
 };

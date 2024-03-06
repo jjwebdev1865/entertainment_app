@@ -1,31 +1,31 @@
-import React from "react";
-import { routerType } from "../types/router.types";
-import AboutMe from "./AboutMe";
-import Home from "./Home";
-import Movies from "./Movies";
-import TvShows from "./TvShows";
+import React from 'react';
+import { routerType } from '../types/router.types';
+import AboutMe from './AboutMe';
+import Home from './Home';
+import Movies from './Movies';
+import TvShows from './TvShows';
 
 const pagesData: routerType[] = [
   {
-    path: "",
+    path: '',
     element: <Home />,
-    title: "home"
+    title: 'home',
   },
   {
-    path: "about-me",
+    path: 'about-me',
     element: <AboutMe />,
-    title: "about me"
+    title: 'about me',
   },
   {
     path: 'movies',
     element: <Movies />,
-    title: 'movies'
+    title: 'movies',
   },
   {
     path: 'tv-shows',
     element: <TvShows />,
-    title: 'tv shows'
-  }
+    title: 'tv shows',
+  },
 ];
 
 export default pagesData;

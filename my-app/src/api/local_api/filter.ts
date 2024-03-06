@@ -1,10 +1,10 @@
-import { movies } from "../../config/movies";
-import { Movie } from "../../models/types";
+import { movies } from '../../config/movies';
+import { Movie } from '../../models/types';
 
-type ListTypes = Movie
+type ListTypes = Movie;
 
 export const getFavorites = (list: ListTypes[]): ListTypes[] => {
-  const favorites = list.filter(item => item.favorite);
+  const favorites = list.filter((item) => item.favorite);
   return favorites;
 };
 
