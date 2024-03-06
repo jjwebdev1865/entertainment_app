@@ -1,1 +1,1 @@
-export * from './FavoritesTile'
+export * from './FavoritesTile';

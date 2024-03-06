@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const StyledMovieList = styled.ul`
   list-style: none;
@@ -11,12 +11,12 @@ export const StyledMovieList = styled.ul`
   li {
     width: 23%;
   }
-`
+`;
 
 export const StyledMovieItem = styled.li`
   border: 2px solid black;
-`
+`;
 
 export const StyledPoster = styled.img`
   width: 100%;
-`
+`;

@@ -1,6 +1,6 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import styled from 'styled-components'
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import styled from 'styled-components';
 
 const StyledNavbar = styled.nav`
   background: #b3b3b3;
@@ -12,7 +12,7 @@ const StyledNavbar = styled.nav`
     text-decoration: none;
     padding: 25px 15px;
   }
-`
+`;
 
 export const Navbar = () => {
   return (
@@ -42,5 +42,5 @@ export const Navbar = () => {
         })}
       >TV Shows</NavLink>
     </StyledNavbar>
-  )
-}
+  );
+};
