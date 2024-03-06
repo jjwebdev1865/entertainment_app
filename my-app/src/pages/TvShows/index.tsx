@@ -1,5 +1,5 @@
-import React from 'react'
-import { Navbar } from '../../common'
+import React from 'react';
+import { Navbar } from '../../common';
 
 const TvShows = (): JSX.Element => {
   
@@ -8,7 +8,7 @@ const TvShows = (): JSX.Element => {
       <Navbar />
       <h1 data-testid='tv-show-header'>TV Shows</h1>
     </div>
-  )
-}
+  );
+};
 
-export default TvShows
+export default TvShows;
