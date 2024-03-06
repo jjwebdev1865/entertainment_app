@@ -1,5 +1,5 @@
 import { Movie } from "../models/types";
-import * as images from '../assets/images/images'
+import * as images from '../assets/images/images';
 
 
 export const movies: Movie[] = [
@@ -47,4 +47,4 @@ export const movies: Movie[] = [
     releaseYear: 2023,
     runTime: 116
   }
-]
+];

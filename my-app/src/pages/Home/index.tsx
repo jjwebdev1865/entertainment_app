@@ -1,15 +1,15 @@
-import React from 'react'
-import { getFavorites } from '../../api/local_api/filter'
-import { movies } from '../../config/movies'
-import { FavoritesTile, Navbar } from '../../common'
-import styled from 'styled-components'
+import React from 'react';
+import { getFavorites } from '../../api/local_api/filter';
+import { movies } from '../../config/movies';
+import { FavoritesTile, Navbar } from '../../common';
+import styled from 'styled-components';
 
 const StyledFavorites = styled.ul`
   list-style: none;
-`
+`;
 
 const Home = (): JSX.Element => {
-  const favorites = getFavorites(movies)
+  const favorites = getFavorites(movies);
 
   return (
     <div>
@@ -22,12 +22,12 @@ const Home = (): JSX.Element => {
           {favorites.map(item => {
             return (
               <FavoritesTile key={`favorite-movie-${item.id}`} title={item.title} id={item.id} />
-            )
+            );
           })}
         </StyledFavorites>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
