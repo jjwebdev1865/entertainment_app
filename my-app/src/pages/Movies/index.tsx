@@ -2,7 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Navbar, SearchBar } from '../../common';
 import { getMovies } from '../../api/local_api/filter';
 import { Movie } from '../../models/types';
-import { StyledMovieItem, StyledMovieList, StyledPoster } from './index.styles';
+import {
+  StyledMovieItem,
+  StyledMovieList,
+  StyledPoster,
+  StyledRatingDropdown,
+} from './index.styles';
+import { RatingsDropdown } from '../../common/RatingsDropdown/RatingsDropdown';
 
 export const Movies = (): JSX.Element => {
   const movies = getMovies();
@@ -35,12 +41,15 @@ export const Movies = (): JSX.Element => {
       <Navbar />
 
       <h1>Movies</h1>
-      <SearchBar
-        searchVal={searchVal}
-        inputHandler={inputHandler}
-        handleClear={handleClear}
-        handleSearch={handleSearch}
-      />
+      <StyledRatingDropdown data-testid="movie-filter-bar">
+        <SearchBar
+          searchVal={searchVal}
+          inputHandler={inputHandler}
+          handleClear={handleClear}
+          handleSearch={handleSearch}
+        />
+        <RatingsDropdown />
+      </StyledRatingDropdown>
 
       <section data-testid="movies-section">
         <StyledMovieList data-testid="movies-list">
@@ -50,7 +59,8 @@ export const Movies = (): JSX.Element => {
                 <StyledPoster src={movie.poster} />
                 <h3>{movie.title}</h3>
                 <p data-testid={`movie-${movie.id}-info`}>
-                  {movie.rating} / {movie.runTime} min.
+                  {movie.rating} | {movie.runTime} min. | My Rating:{' '}
+                  {movie.myRating}/10
                 </p>
                 {movie?.actors && (
                   <p>
