@@ -6,7 +6,7 @@ import { StyledMovieItem, StyledMovieList, StyledPoster } from './index.styles';
 
 export const Movies = (): JSX.Element => {
   const movies = getMovies();
-  const [searchVal, setSearchVal] = useState("");
+  const [searchVal, setSearchVal] = useState('');
   const [filteredMovies, setFilteredMovies] = useState([] as Movie[]);
 
   useEffect(() => {
@@ -19,7 +19,9 @@ export const Movies = (): JSX.Element => {
   };
 
   const handleSearch = (input: string) => {
-    const filterList = movies.filter(movie => movie.title.toLowerCase().includes(input));
+    const filterList = movies.filter((movie) =>
+      movie.title.toLowerCase().includes(input),
+    );
     setFilteredMovies(filterList);
   };
 
@@ -29,15 +31,20 @@ export const Movies = (): JSX.Element => {
   };
 
   return (
-    <div data-testid='movies'>
+    <div data-testid="movies">
       <Navbar />
-      
-      <h1>Movies</h1>
-      <SearchBar searchVal={searchVal} inputHandler={inputHandler} handleClear={handleClear} handleSearch={handleSearch} />
 
-      <section data-testid='movies-section'>
-        <StyledMovieList data-testid='movies-list'>
-          {filteredMovies.map(movie => {
+      <h1>Movies</h1>
+      <SearchBar
+        searchVal={searchVal}
+        inputHandler={inputHandler}
+        handleClear={handleClear}
+        handleSearch={handleSearch}
+      />
+
+      <section data-testid="movies-section">
+        <StyledMovieList data-testid="movies-list">
+          {filteredMovies.map((movie) => {
             return (
               <StyledMovieItem key={movie.id} data-testid={`movie-${movie.id}`}>
                 <StyledPoster src={movie.poster} />
@@ -45,7 +52,11 @@ export const Movies = (): JSX.Element => {
                 <p data-testid={`movie-${movie.id}-info`}>
                   {movie.rating} / {movie.runTime} min.
                 </p>
-                {movie?.actors && <p>{movie.actors[0]}, {movie.actors[1]}</p>}
+                {movie?.actors && (
+                  <p>
+                    {movie.actors[0]}, {movie.actors[1]}
+                  </p>
+                )}
               </StyledMovieItem>
             );
           })}

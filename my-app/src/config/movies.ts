@@ -1,6 +1,5 @@
-import { Movie } from "../models/types";
+import { Movie } from '../models/types';
 import * as images from '../assets/images/images';
-
 
 export const movies: Movie[] = [
   {
@@ -12,7 +11,7 @@ export const movies: Movie[] = [
     poster: images.anyoneButYouImage,
     rating: 'R',
     releaseYear: 2023,
-    runTime: 103
+    runTime: 103,
   },
   {
     favorite: false,
@@ -23,7 +22,7 @@ export const movies: Movie[] = [
     poster: images.aquaman_two,
     rating: 'PG-13',
     releaseYear: 2023,
-    runTime: 124
+    runTime: 124,
   },
   {
     favorite: false,
@@ -34,7 +33,7 @@ export const movies: Movie[] = [
     poster: images.duneImage,
     rating: 'PG-13',
     releaseYear: 2021,
-    runTime: 155
+    runTime: 155,
   },
   {
     favorite: false,
@@ -45,6 +44,6 @@ export const movies: Movie[] = [
     poster: images.wonkaImage,
     rating: 'PG',
     releaseYear: 2023,
-    runTime: 116
-  }
+    runTime: 116,
+  },
 ];

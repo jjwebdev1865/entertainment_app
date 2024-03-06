@@ -1,16 +1,16 @@
-import { fireEvent, render, screen } from "@testing-library/react";
-import React from "react";
+import { fireEvent, render, screen } from '@testing-library/react';
+import React from 'react';
 import '@testing-library/jest-dom';
-import Movies from "./index";
+import Movies from './index';
 
-describe("Movies", () => {
-  it("should render Home component correctly", () => {
+describe('Movies', () => {
+  it('should render Home component correctly', () => {
     render(<Movies />);
     const element = screen.getByTestId('movies');
     expect(element).toBeInTheDocument();
   });
 
-  it("contains navbar", () => {
+  it('contains navbar', () => {
     render(<Movies />);
     const element = screen.getByTestId('nav-bar-container');
     expect(element).toBeInTheDocument();
@@ -18,12 +18,12 @@ describe("Movies", () => {
 
   it('contains the correct headers', () => {
     render(<Movies />);
-    const headingOne = screen.getByRole('heading', {level: 1});
+    const headingOne = screen.getByRole('heading', { level: 1 });
     expect(headingOne).toBeVisible();
   });
 
   describe('contains movie section', () => {
-    it("and renders section", () => {
+    it('and renders section', () => {
       render(<Movies />);
       const element = screen.getByTestId('movies-section');
       expect(element).toBeInTheDocument();
