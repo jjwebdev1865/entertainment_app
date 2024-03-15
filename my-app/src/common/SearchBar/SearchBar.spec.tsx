@@ -10,7 +10,6 @@ describe('SearchBar', () => {
         searchVal={'test'}
         inputHandler={jest.fn()}
         handleClear={jest.fn()}
-        handleSearch={jest.fn()}
       />,
     );
     const element = screen.getByTestId('search-section');
@@ -23,7 +22,6 @@ describe('SearchBar', () => {
         searchVal={'test'}
         inputHandler={jest.fn()}
         handleClear={jest.fn()}
-        handleSearch={jest.fn()}
       />,
     );
     const element = screen.getByTestId('search-input');
@@ -36,7 +34,6 @@ describe('SearchBar', () => {
         searchVal={'test'}
         inputHandler={jest.fn()}
         handleClear={jest.fn()}
-        handleSearch={jest.fn()}
       />,
     );
     const element = screen.getByTestId('search-clear-button');
@@ -49,7 +46,6 @@ describe('SearchBar', () => {
         searchVal={'test'}
         inputHandler={jest.fn()}
         handleClear={jest.fn()}
-        handleSearch={jest.fn()}
       />,
     );
     const element = screen.getByTestId('search-submit-button');

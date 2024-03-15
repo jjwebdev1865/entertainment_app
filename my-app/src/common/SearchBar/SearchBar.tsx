@@ -4,11 +4,10 @@ type SearchBarProps = {
   searchVal: string;
   inputHandler: ChangeEventHandler<HTMLInputElement>;
   handleClear: () => void;
-  handleSearch: (input: string) => void;
 };
 
 export const SearchBar = (props: SearchBarProps): JSX.Element => {
-  const { searchVal, inputHandler, handleClear, handleSearch } = props;
+  const { searchVal, inputHandler, handleClear } = props;
   return (
     <div data-testid="search-section">
       <input
@@ -19,12 +18,6 @@ export const SearchBar = (props: SearchBarProps): JSX.Element => {
       />
       <button data-testid="search-clear-button" onClick={() => handleClear()}>
         Clear
-      </button>
-      <button
-        data-testid="search-submit-button"
-        onClick={() => handleSearch(searchVal)}
-      >
-        Search
       </button>
     </div>
   );
