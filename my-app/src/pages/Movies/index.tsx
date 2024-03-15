@@ -30,7 +30,7 @@ export const Movies = (): JSX.Element => {
 
     if (input === '' && rating === 0) {
       console.log('input and rating are undefined');
-      return movies;
+      filteredMovies = movies;
     } else if (input === '' && rating !== 0) {
       filteredMovies = movies.filter((movie) => movie.myRating === rating);
     } else if (input !== '' && rating === 0) {
