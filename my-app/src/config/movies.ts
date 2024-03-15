@@ -40,6 +40,18 @@ export const movies: Movie[] = [
   },
   {
     favorite: false,
+    id: 'dune-part-two',
+    seen: ['2024'],
+    title: 'Dune',
+    actors: ['Timothée Chalamet', 'Zendaya'],
+    poster: images.duneTwoImage,
+    rating: 'PG-13',
+    releaseYear: 2024,
+    runTime: 166,
+    myRating: 9,
+  },
+  {
+    favorite: false,
     id: 'wonka',
     seen: ['2024'],
     title: 'Wonka',
