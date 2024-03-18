@@ -8,13 +8,11 @@ import {
   StyledPoster,
   StyledRatingDropdown,
 } from './index.styles';
-import { RatingsDropdown } from '../../common/RatingsDropdown/RatingsDropdown';
 
 export const Movies = (): JSX.Element => {
   const movies = getMovies();
   const [searchVal, setSearchVal] = useState('');
   const [filteredMovies, setFilteredMovies] = useState([] as Movie[]);
-  const [rating, setRating] = useState(0);
 
   useEffect(() => {
     setFilteredMovies(movies);
@@ -25,19 +23,14 @@ export const Movies = (): JSX.Element => {
     setSearchVal(lowerCaseSearch);
   };
 
-  const handleSearch = (input: string, rating: number) => {
+  const handleSearch = (input: string) => {
     let filteredMovies = [] as Movie[];
 
-    if (input === '' && rating === 0) {
+    if (input === '') {
       console.log('input and rating are undefined');
       filteredMovies = movies;
-    } else if (input === '' && rating !== 0) {
-      filteredMovies = movies.filter((movie) => movie.myRating === rating);
-    } else if (input !== '' && rating === 0) {
-      filteredMovies = movies.filter((movie) => movie.title.toLowerCase().includes(input));
     } else {
-      const inputList = movies.filter((movie) => movie.title.toLowerCase().includes(input));
-      filteredMovies = inputList.filter((movie) => movie.myRating === rating);
+      filteredMovies = movies.filter((movie) => movie.title.toLowerCase().includes(input));
     }  
     setFilteredMovies(filteredMovies);
   };
@@ -58,11 +51,9 @@ export const Movies = (): JSX.Element => {
           inputHandler={inputHandler}
           handleClear={handleClear} 
         />
-        <RatingsDropdown currentRating={rating} setRating={setRating} />
         <SubmitButton 
           buttonText='Search' 
           searchVal={searchVal} 
-          ratingVal={rating} 
           handleSearch={handleSearch} 
         />
       </StyledRatingDropdown>
