@@ -3,18 +3,17 @@ import React from 'react';
 type SearchBarProps = {
   buttonText: string;
   searchVal: string;
-  ratingVal: number;
-  handleSearch: (input: string, ratingVal: number) => void;
+  handleSearch: (input: string) => void;
 };
 
 
 export const SubmitButton = (props: SearchBarProps): JSX.Element => {
-  const { buttonText, searchVal, ratingVal, handleSearch} = props;
+  const { buttonText, searchVal, handleSearch} = props;
   return (
     <div>
       <button
         data-testid={`${buttonText}-button`}
-        onClick={() => handleSearch(searchVal, ratingVal)}
+        onClick={() => handleSearch(searchVal)}
       >
         {buttonText}
       </button>
