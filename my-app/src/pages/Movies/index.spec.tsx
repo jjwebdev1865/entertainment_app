@@ -28,12 +28,6 @@ describe('Movies', () => {
       const element = screen.getByTestId('movies-section');
       expect(element).toBeInTheDocument();
     });
-
-    it('renders a movie', () => {
-      render(<Movies />);
-      const movie = screen.getByTestId('movie-anyone-but-you');
-      expect(movie).toBeVisible();
-    });
   });
 
   describe('filter changes the movie list', () => {

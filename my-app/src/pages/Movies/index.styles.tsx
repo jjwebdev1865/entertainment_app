@@ -10,15 +10,8 @@ export const StyledMovieList = styled.ul`
 
   li {
     width: 23%;
+    margin: 1% 0;
   }
-`;
-
-export const StyledMovieItem = styled.li`
-  border: 2px solid black;
-`;
-
-export const StyledPoster = styled.img`
-  width: 100%;
 `;
 
 export const StyledRatingDropdown = styled.div`
