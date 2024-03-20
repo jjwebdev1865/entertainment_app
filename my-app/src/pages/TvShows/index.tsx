@@ -34,6 +34,7 @@ const TvShows = (): JSX.Element => {
                   <p>{show.title}</p>
                   <button onClick={() => setModalOpen(!modalOpen)}>Open Modal</button>
 
+                  {/* modal concept from: https://www.educative.io/answers/how-to-create-a-modal-in-react-js */}
                   <Modal
                     isOpen={modalOpen}
                     onRequestClose={() => setModalOpen(false)}
