@@ -13,7 +13,9 @@ export const modalStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    backgroundColor: "white",
-    width: 400,
+    backgroundColor: "lightgray",
+    width: '50%',
+    height: '50%',
+    padding: 0
   },
 };
