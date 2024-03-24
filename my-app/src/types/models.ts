@@ -16,7 +16,7 @@ export interface Movie {
   title: string;
   actors: string[];
   poster: string;
-  rating: 'PG' | 'PG-13' | 'R';
+  rating: 'PG' | 'PG-13' | 'R' | 'NR' | 'TV-PG';
   releaseYear: number;
   runTime: number;
   // TODO: update to strict be 1-10

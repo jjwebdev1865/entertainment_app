@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 import * as styles from './CardWithModal.styles';
 import { Show } from "../../types/models";
+import { formatSeenString } from "../../api/local_api/format";
 
 type TVCardProps = {
   show: Show;
@@ -13,15 +14,7 @@ export const TVCard = (props: TVCardProps) => {
   const { modalStyles, StyledPoster } = styles;
   const { show } = props;
   const { endDate, poster, rating, releaseDate, seasons, seen, title } = show;
-
-  let seenString = '';
-  seen.map((item, index) => {
-    if (index + 1 === seen.length) {
-      seenString = seenString + item;
-    } else {
-      seenString = seenString + `${item}, `;
-    }
-  });
+  const seenString = formatSeenString(seen);
 
   return (
     <li>

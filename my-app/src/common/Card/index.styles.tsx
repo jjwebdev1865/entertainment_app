@@ -6,4 +6,5 @@ export const StyledMovieItem = styled.li`
 
 export const StyledPoster = styled.img`
   width: 100%;
+  height: 70%;
 `;
