@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { Card } from './index';
-import { Movie } from '../../models/types';
+import { Movie } from '../../types/models';
 
 describe('Card', () => {
 
