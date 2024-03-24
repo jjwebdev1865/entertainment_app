@@ -1,15 +1,17 @@
-import { Show } from "../models/types";
+import * as images from '../assets/images/tv_image'; 
+import { Show } from '../types/models';
 
 
 export const shows: Show[] = [
   {
-    endDate: '2009',
+    endDate: '2016',
     id: 'castle',
     rating: 'TV-14',
-    releaseDate: '2016',
-    seen: ['2024'],
+    releaseDate: '2009',
+    seen: ['2023', '2024'],
     title: 'Castle',
-    seasons: 8
+    seasons: 8,
+    poster: images.castleImage
   },
   {
     endDate: '2014',
@@ -18,6 +20,7 @@ export const shows: Show[] = [
     releaseDate: '2006',
     seen: ['2024'],
     title: 'Psych',
-    seasons: 8
+    seasons: 8,
+    poster: images.psychImage
   }
 ];

@@ -1,12 +1,12 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
 import { Navbar, SearchBar, SubmitButton } from '../../common';
 import { getMovies } from '../../api/local_api/filter';
-import { Movie } from '../../models/types';
 import {
   StyledMovieList,
   StyledRatingDropdown,
 } from './index.styles';
 import { Card } from '../../common/Card';
+import { Movie } from '../../types/models';
 
 export const Movies = (): JSX.Element => {
   const movies = getMovies();

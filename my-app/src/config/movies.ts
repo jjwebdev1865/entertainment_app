@@ -1,5 +1,5 @@
-import { Movie } from '../models/types';
 import * as images from '../assets/images/images';
+import { Movie } from '../types/models';
 
 export const movies: Movie[] = [
   {

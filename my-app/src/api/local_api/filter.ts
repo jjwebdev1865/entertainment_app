@@ -1,5 +1,5 @@
 import { movies } from '../../config/movies';
-import { Movie } from '../../models/types';
+import { Movie } from '../../types/models';
 
 type ListTypes = Movie;
 

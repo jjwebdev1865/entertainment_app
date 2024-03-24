@@ -1,4 +1,4 @@
-import { Movie } from "../../models/types";
+import { Movie } from "../../types/models";
 import { StyledMovieItem, StyledPoster } from "./index.styles";
 import React from 'react';
 
