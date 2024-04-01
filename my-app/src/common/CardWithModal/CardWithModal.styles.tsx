@@ -15,7 +15,8 @@ export const modalStyles = {
     transform: "translate(-50%, -50%)",
     backgroundColor: "lightgray",
     width: '50%',
-    height: '50%',
-    padding: 0
+    height: '60%',
+    padding: 0,
+    overflow: 'hidden'
   },
 };

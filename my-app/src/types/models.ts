@@ -7,6 +7,17 @@ export interface Show {
   seasons: number;
   seen: string[];
   title: string;
+  // Add for each eventually
+  showReview?: Seasons
+}
+
+export interface Seasons {
+  seasonOne: ShowReview
+}
+
+export interface ShowReview {
+  bestCharacter: string;
+  worstCharacter: string;
 }
 
 export interface Movie {

@@ -1,8 +1,20 @@
 import * as images from '../assets/images/tv_image'; 
 import { Show } from '../types/models';
+import { arrowReview } from './tvReviews/arrowReview';
 
 
 export const shows: Show[] = [
+  {
+    endDate: '2020',
+    id: 'arrow',
+    rating: 'TV-14',
+    releaseDate: '2012',
+    seen: ['2024'],
+    title: 'Arrow',
+    seasons: 8,
+    poster: images.arrowImage,
+    showReview: arrowReview
+  },
   {
     endDate: '2016',
     id: 'castle',
