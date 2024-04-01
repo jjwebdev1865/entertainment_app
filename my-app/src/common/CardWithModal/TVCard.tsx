@@ -21,12 +21,41 @@ const StyledModalImage = styled.div`
   margin: 0;
 `;
 
+const StyledModalHeader = styled.div`
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background-color: white;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  h3 {
+    padding-top: 10px;
+    margin: 0;
+  }
+`;
+
+const StyledFooter = styled.div`
+position: fixed;
+left: 50%;
+right: 10%;
+bottom: 0;
+width: 50%;
+color: white;
+text-align: center;
+border-top: 2px solid black;
+
+button {
+  padding: 5px;
+}
+`;
+
 export const TVCard = (props: TVCardProps) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const { modalStyles, StyledPoster } = styles;
   const { show } = props;
-  const { endDate, id, poster, rating, releaseDate, seasons, seen, title } = show;
+  const { endDate, id, poster, rating, releaseDate, seasons, seen, title, showReview } = show;
   const seenString = formatSeenString(seen);
 
   return (
@@ -44,13 +73,23 @@ export const TVCard = (props: TVCardProps) => {
             <img src={poster} style={{ width: '100%', height: '100%'}} />
           </StyledModalImage>
           <StyledModalContent data-testid={`tv-show-card-modal-content-${id}`}>
-            <h3><strong>Title:</strong> {title} </h3>
-            
+            <StyledModalHeader data-testid='modal-header-container'>
+              <h3><strong>Title:</strong> {title} </h3>
+            </StyledModalHeader>
             <div><strong>Seasons:</strong> {seasons}</div>
             <div><strong>TV Rating:</strong> {rating}</div>
             <div><strong>Runtime:</strong> {releaseDate} - {endDate}</div>
             <div><strong>Seen:</strong> {seenString}</div>
-            <button onClick={() => setModalOpen(false)}>Close Modal</button>
+
+            {showReview && (
+              <div> here is where the show review goes</div>
+            )}
+
+            <StyledFooter>
+              <div>placeholder for pagination</div>
+              <button onClick={() => setModalOpen(false)}>Close Modal</button>
+            </StyledFooter>
+           
           </StyledModalContent>
         </div>
       </Modal>
