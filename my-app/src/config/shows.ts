@@ -1,6 +1,6 @@
 import * as images from '../assets/images/tv_image'; 
 import { Show } from '../types/models';
-import { arrowReview } from './tvReviews/arrowReview';
+import * as reviews from './tvReviews';
 
 
 export const shows: Show[] = [
@@ -13,7 +13,7 @@ export const shows: Show[] = [
     title: 'Arrow',
     seasons: 8,
     poster: images.arrowImage,
-    showReview: arrowReview
+    showReview: reviews.arrowReview
   },
   {
     endDate: '2016',
@@ -24,6 +24,16 @@ export const shows: Show[] = [
     title: 'Castle',
     seasons: 8,
     poster: images.castleImage
+  },
+  {
+    endDate: 'present',
+    id: 'fallout',
+    rating: 'TV-MA',
+    releaseDate: '2024',
+    seen: [ '2024'],
+    title: 'Fallout',
+    seasons: 6,
+    poster: images.falloutImage,
   },
   {
     endDate: '2014',
