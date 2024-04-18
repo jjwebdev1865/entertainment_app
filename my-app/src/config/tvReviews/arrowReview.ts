@@ -1,4 +1,4 @@
-import { Seasons, ShowReview } from "../../types/models";
+import { Seasons } from "../../types/models";
 
 
 export const arrowReview: Seasons = {
