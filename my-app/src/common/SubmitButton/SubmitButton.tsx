@@ -6,9 +6,8 @@ type SearchBarProps = {
   handleSearch: (input: string) => void;
 };
 
-
 export const SubmitButton = (props: SearchBarProps): JSX.Element => {
-  const { buttonText, searchVal, handleSearch} = props;
+  const { buttonText, searchVal, handleSearch } = props;
   return (
     <div>
       <button
@@ -18,6 +17,5 @@ export const SubmitButton = (props: SearchBarProps): JSX.Element => {
         {buttonText}
       </button>
     </div>
-
   );
 };

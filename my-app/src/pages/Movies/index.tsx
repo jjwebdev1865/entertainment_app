@@ -1,10 +1,7 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
 import { Navbar, SearchBar, SubmitButton } from '../../common';
 import { getMovies } from '../../api/local_api/filter';
-import {
-  StyledMovieList,
-  StyledRatingDropdown,
-} from './index.styles';
+import { StyledMovieList, StyledRatingDropdown } from './index.styles';
 import { Card } from '../../common/Card';
 import { Movie } from '../../types/models';
 
@@ -29,8 +26,10 @@ export const Movies = (): JSX.Element => {
       console.log('input are undefined');
       filteredMovies = movies;
     } else {
-      filteredMovies = movies.filter((movie) => movie.title.toLowerCase().includes(input));
-    }  
+      filteredMovies = movies.filter((movie) =>
+        movie.title.toLowerCase().includes(input),
+      );
+    }
     setFilteredMovies(filteredMovies);
   };
 
@@ -48,21 +47,19 @@ export const Movies = (): JSX.Element => {
         <SearchBar
           searchVal={searchVal}
           inputHandler={inputHandler}
-          handleClear={handleClear} 
+          handleClear={handleClear}
         />
-        <SubmitButton 
-          buttonText='Search' 
-          searchVal={searchVal} 
-          handleSearch={handleSearch} 
+        <SubmitButton
+          buttonText="Search"
+          searchVal={searchVal}
+          handleSearch={handleSearch}
         />
       </StyledRatingDropdown>
 
       <section data-testid="movies-section">
         <StyledMovieList data-testid="movies-list">
           {filteredMovies.map((movie) => {
-            return (
-              <Card key={movie.id} movie={movie} />
-            );
+            return <Card key={movie.id} movie={movie} />;
           })}
         </StyledMovieList>
       </section>

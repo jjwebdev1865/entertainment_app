@@ -18,7 +18,6 @@ export const StyledShowList = styled.ul`
 `;
 
 const TvShows = (): JSX.Element => {
-
   return (
     <div>
       <Navbar />
@@ -27,7 +26,9 @@ const TvShows = (): JSX.Element => {
       <div>
         <section data-testid="shows-section">
           <StyledShowList>
-            {shows.map(show => <TVCard key={show.id} show={show} /> )}
+            {shows.map((show) => (
+              <TVCard key={show.id} show={show} />
+            ))}
           </StyledShowList>
         </section>
       </div>

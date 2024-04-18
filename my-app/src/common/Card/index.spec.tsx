@@ -5,7 +5,6 @@ import { Card } from './index';
 import { Movie } from '../../types/models';
 
 describe('Card', () => {
-
   const mockMovie: Movie = {
     favorite: true,
     id: 'test-movie',
