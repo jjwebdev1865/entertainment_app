@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledPoster = styled.img`
   width: 100%;
@@ -7,16 +7,16 @@ export const StyledPoster = styled.img`
 
 export const modalStyles = {
   content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-    backgroundColor: "lightgray",
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    backgroundColor: 'lightgray',
     width: '50%',
     height: '60%',
     padding: 0,
-    overflow: 'hidden'
+    overflow: 'hidden',
   },
 };

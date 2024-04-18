@@ -66,7 +66,7 @@ export const movies: Movie[] = [
     favorite: false,
     id: 'the-librarian-return-to-king-solomons-mine',
     seen: ['2024'],
-    title: 'The Librarian: Return to King Solomon\'s Mine',
+    title: "The Librarian: Return to King Solomon's Mine",
     actors: ['Noah Wyle', 'Gabrielle Anwar'],
     poster: images.librarianTwoImage,
     rating: 'TV-PG',

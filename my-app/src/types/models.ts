@@ -8,11 +8,11 @@ export interface Show {
   seen: string[];
   title: string;
   // Add for each eventually
-  showReview?: Seasons
+  showReview?: Seasons;
 }
 
 export interface Seasons {
-  seasonOne: ShowReview
+  seasonOne: ShowReview;
 }
 
 export interface ShowReview {
@@ -32,4 +32,4 @@ export interface Movie {
   runTime: number;
   // TODO: update to strict be 1-10
   myRating: number; // 1 - 10
-};
+}

@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import Modal from "react-modal";
+import React, { useState } from 'react';
+import Modal from 'react-modal';
 import * as styles from './CardWithModal.styles';
-import { Show } from "../../types/models";
-import { formatSeenString } from "../../api/local_api/format";
-import styled from "styled-components";
+import { Show } from '../../types/models';
+import { formatSeenString } from '../../api/local_api/format';
+import styled from 'styled-components';
 
 type TVCardProps = {
   show: Show;
-}
+};
 
 const StyledModalContent = styled.div`
   float: right;
@@ -36,18 +36,18 @@ const StyledModalHeader = styled.div`
 `;
 
 const StyledFooter = styled.div`
-position: fixed;
-left: 50%;
-right: 10%;
-bottom: 0;
-width: 50%;
-color: white;
-text-align: center;
-border-top: 2px solid black;
+  position: fixed;
+  left: 50%;
+  right: 10%;
+  bottom: 0;
+  width: 50%;
+  color: white;
+  text-align: center;
+  border-top: 2px solid black;
 
-button {
-  padding: 5px;
-}
+  button {
+    padding: 5px;
+  }
 `;
 
 export const TVCard = (props: TVCardProps) => {
@@ -55,12 +55,22 @@ export const TVCard = (props: TVCardProps) => {
 
   const { modalStyles, StyledPoster } = styles;
   const { show } = props;
-  const { endDate, id, poster, rating, releaseDate, seasons, seen, title, showReview } = show;
+  const {
+    endDate,
+    id,
+    poster,
+    rating,
+    releaseDate,
+    seasons,
+    seen,
+    title,
+    showReview,
+  } = show;
   const seenString = formatSeenString(seen);
 
   return (
     <li>
-      <StyledPoster src={poster} onClick={() => setModalOpen(!modalOpen)}/>
+      <StyledPoster src={poster} onClick={() => setModalOpen(!modalOpen)} />
 
       <Modal
         ariaHideApp={false}
@@ -70,26 +80,33 @@ export const TVCard = (props: TVCardProps) => {
       >
         <div data-testid={`tv-show-card-modal-container-${id}`}>
           <StyledModalImage>
-            <img src={poster} style={{ width: '100%', height: '100%'}} />
+            <img src={poster} style={{ width: '100%', height: '100%' }} />
           </StyledModalImage>
           <StyledModalContent data-testid={`tv-show-card-modal-content-${id}`}>
-            <StyledModalHeader data-testid='modal-header-container'>
-              <h3><strong>Title:</strong> {title} </h3>
+            <StyledModalHeader data-testid="modal-header-container">
+              <h3>
+                <strong>Title:</strong> {title}{' '}
+              </h3>
             </StyledModalHeader>
-            <div><strong>Seasons:</strong> {seasons}</div>
-            <div><strong>TV Rating:</strong> {rating}</div>
-            <div><strong>Runtime:</strong> {releaseDate} - {endDate}</div>
-            <div><strong>Seen:</strong> {seenString}</div>
+            <div>
+              <strong>Seasons:</strong> {seasons}
+            </div>
+            <div>
+              <strong>TV Rating:</strong> {rating}
+            </div>
+            <div>
+              <strong>Runtime:</strong> {releaseDate} - {endDate}
+            </div>
+            <div>
+              <strong>Seen:</strong> {seenString}
+            </div>
 
-            {showReview && (
-              <div> here is where the show review goes</div>
-            )}
+            {showReview && <div> here is where the show review goes</div>}
 
             <StyledFooter>
               <div>placeholder for pagination</div>
               <button onClick={() => setModalOpen(false)}>Close Modal</button>
             </StyledFooter>
-           
           </StyledModalContent>
         </div>
       </Modal>

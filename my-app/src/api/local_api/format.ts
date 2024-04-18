@@ -1,5 +1,3 @@
-
-
 export const formatSeenString = (seenList: string[]): string => {
   let seenString = '';
   seenList.map((item, index) => {
