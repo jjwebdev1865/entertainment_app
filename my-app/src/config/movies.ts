@@ -1,15 +1,15 @@
 import * as images from '../assets/images/images';
-import { Movie } from '../types/models';
+import { Movie, ParentGuideRatings } from '../types/models';
 
 export const movies: Movie[] = [
   {
     favorite: true,
     id: 'anyone-but-you',
     seen: ['2024'],
-    title: 'Anyone but You',
+    title: 'Anyone But You',
     actors: ['Glen Powell', 'Sydney Sweeney'],
     poster: images.anyoneButYouImage,
-    rating: 'R',
+    rating: 'R' as ParentGuideRatings,
     releaseYear: 2023,
     runTime: 103,
     myRating: 8,
@@ -18,7 +18,7 @@ export const movies: Movie[] = [
     favorite: false,
     id: 'aquaman-and-the-lost-kingdom',
     seen: ['2024'],
-    title: 'Aquaman and the lost kingdom',
+    title: 'Aquaman and the Lost Kingdom',
     actors: ['Jason Momoa', 'Patrick Wilson'],
     poster: images.aquaman_two,
     rating: 'PG-13',
