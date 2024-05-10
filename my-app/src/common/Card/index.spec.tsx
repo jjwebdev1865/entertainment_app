@@ -8,7 +8,7 @@ describe('Card', () => {
   const mockMovie: Movie = {
     favorite: true,
     id: 'test-movie',
-    seen: ['2024'],
+    seen: '2024',
     title: 'Anyone but You',
     actors: ['Glen Powell', 'Sydney Sweeney'],
     poster: expect.any(Image),
@@ -16,6 +16,7 @@ describe('Card', () => {
     releaseYear: 2023,
     runTime: 103,
     myRating: 8,
+    review: 'nice work'
   };
 
   it('renders a movie', () => {
