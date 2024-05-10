@@ -9,9 +9,16 @@ export interface BaseDetails {
   releaseYear: number;
 }
 
+export interface SeasonContent {
+  season: number,
+  actors: string[]
+  review: string;
+}
+
 export interface Show extends BaseDetails {
   endDate: string;
   seasons: number;
+  seasonContent: SeasonContent[]
   // Add for each eventually
   showReview?: Seasons;
 }

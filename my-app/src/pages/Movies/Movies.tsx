@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
 import { Navbar, SearchBar, SubmitButton } from '../../common';
 import { getMovies } from '../../api/local_api/filter';
-import { StyledMovieList, StyledRatingDropdown } from './index.styles';
+import { StyledMovieList, StyledRatingDropdown } from './Movies.styles';
 import { Card } from '../../common/Card';
 import { Movie } from '../../types/models';
 

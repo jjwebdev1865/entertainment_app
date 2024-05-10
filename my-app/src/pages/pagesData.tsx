@@ -2,8 +2,8 @@ import React from 'react';
 import { routerType } from '../types/router.types';
 import AboutMe from './AboutMe';
 import Home from './Home';
-import Movies from './Movies';
-import TvShows from './TvShows';
+import Movies from './Movies/Movies';
+import TvShows from './TvShows/TvShows';
 
 const pagesData: routerType[] = [
   {

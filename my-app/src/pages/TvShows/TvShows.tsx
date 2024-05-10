@@ -22,6 +22,7 @@ const TvShows = (): JSX.Element => {
     <div>
       <Navbar />
       <h1 data-testid="tv-show-header">TV Shows</h1>
+      <p style={{ color: 'red', fontWeight: 'bold', marginTop: '0px'}}>*NOTE: created in 2024 and quoting all movies as seen at start of that</p>
 
       <div>
         <section data-testid="shows-section">

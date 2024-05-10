@@ -1,5 +1,6 @@
 import * as images from '../assets/images/tv_image';
 import { Show } from '../types/models';
+import * as content from './tvContent';
 import * as reviews from './tvReviews';
 
 export const shows: Show[] = [
@@ -14,6 +15,7 @@ export const shows: Show[] = [
     seasons: 8,
     poster: images.arrowImage,
     showReview: reviews.arrowReview,
+    seasonContent: content.arrowContent
   },
   {
     endDate: '2016',
@@ -25,6 +27,7 @@ export const shows: Show[] = [
     title: 'Castle',
     seasons: 8,
     poster: images.castleImage,
+    seasonContent: content.castleContent
   },
   {
     endDate: 'Present',
@@ -34,18 +37,8 @@ export const shows: Show[] = [
     releaseYear: 2024,
     seen: '2024',
     title: 'Fallout',
-    seasons: 6,
+    seasons: 1,
     poster: images.falloutImage,
-  },
-  {
-    endDate: '2014',
-    id: 'psych',
-    myRating: 7,
-    rating: 'TV-PG',
-    releaseYear: 2006,
-    seen: '2024',
-    title: 'Psych',
-    seasons: 8,
-    poster: images.psychImage,
-  },
+    seasonContent: content.falloutContent
+  }
 ];
