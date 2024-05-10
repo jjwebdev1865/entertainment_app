@@ -25,7 +25,7 @@ export type ParentGuideRatings = 'PG' | 'PG-13' | 'R' | 'NR' | 'TV-PG';
 export interface Movie {
   favorite: boolean;
   id: string;
-  seen: string[];
+  seen: string;
   title: string;
   actors: string[];
   poster: string;
@@ -34,4 +34,5 @@ export interface Movie {
   runTime: number;
   // TODO: update to strict be 1-10
   myRating: number; // 1 - 10
+  review: string;
 }

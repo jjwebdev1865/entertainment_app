@@ -43,6 +43,7 @@ export const Movies = (): JSX.Element => {
       <Navbar />
 
       <h1>Movies</h1>
+      <p style={{ color: 'red', fontWeight: 'bold', marginTop: '0px'}}>*NOTE: created in 2024 and quoting all movies as seen at start of that</p>
       <StyledRatingDropdown data-testid="movie-filter-bar">
         <SearchBar
           searchVal={searchVal}

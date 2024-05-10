@@ -1,23 +1,19 @@
 import React, { Dispatch, SetStateAction } from 'react';
 import Modal from 'react-modal';
-// import { StyledContentDescriptors, StyledHeader, modalStyles } from './MovieModal.styles';
 import * as styles from './MovieModal.styles';
-import { ParentGuideRatings } from '../../types/models';
+import { Movie } from '../../types/models';
 
 type CardModalProps = {
   modalOpen: boolean;
   setModalOpen: Dispatch<SetStateAction<boolean>>;
-  headingText: string;
-  myRating: number;
-  runtime: number;
-  rating: ParentGuideRatings;
-  actors: string[]
+  movie: Movie
 };
 
 // NOTE: aria react-modal documentation: https://reactcommunity.org/react-modal/accessibility/
-export const MovieModal = (props: CardModalProps): JSX.Element => {
-  const { modalOpen, setModalOpen, headingText, myRating, runtime, rating, actors } = props;
-  const { StyledContentDescriptors, StyledHeader, modalStyles } = styles;
+export const MovieModal = ({modalOpen, setModalOpen, movie}: CardModalProps): JSX.Element => {
+  const {title, myRating, rating, runTime, releaseYear, actors, review, seen} = movie;
+  const { StyledContentDescriptors, StyledHeader, modalStyles, StyledActorsList, StyledSummary } = styles;
+
   return (
     <Modal
       ariaHideApp={false}
@@ -30,30 +26,36 @@ export const MovieModal = (props: CardModalProps): JSX.Element => {
         modal: 'true'
       }}
     >
+      <div>
+        <button onClick={() => setModalOpen(false)} style={{ float: 'right'}}>X</button>
+      </div>
       <StyledHeader id='modal-header-container'>
-        <h1 id='modal-header'>{headingText}</h1>
+        <h1 id='modal-header'>{title}</h1>
       </StyledHeader>
 
       <div id='modal-content'>
         <StyledContentDescriptors id='modal-content-descriptors'>
           <p><strong>My Rating:</strong> {myRating}/10</p>
           <p><strong>Parent Guide:</strong> Rated {rating}</p>
-          <p><strong>Runtime:</strong> {runtime} minutes</p>
+          <p><strong>Runtime:</strong> {runTime} minutes</p>
+          <p><strong>First Seen:</strong> {seen}</p>
+          <p><strong>Release Year:</strong> {releaseYear}</p>
         </StyledContentDescriptors>
-        <div id='modal-content-key-actors'>
+        <StyledActorsList id='modal-content-key-actors'>
           <h2>Actors</h2>
           <ul>
             {actors.map(actor => (
-              <li key={`${headingText}-${actor}`}>{actor}</li>
+              <li key={`${title}-${actor}`}>{actor}</li>
             ))}
           </ul>
-        </div>
+        </StyledActorsList>
+        {review && (
+          <StyledSummary id='modal-content-jims-summary'>
+            <h2>My Review</h2>
+            <p>{review}</p>
+          </StyledSummary>
+        )}
       </div>
-
-      <footer>
-        <button onClick={() => setModalOpen(false)} >Close</button>
-      </footer>
-      
     </Modal>
   );
 };
