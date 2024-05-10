@@ -1,3 +1,6 @@
+export type ParentGuideRatings = 'PG' | 'PG-13' | 'R' | 'NR' | 'TV-PG' | 'TV-14' | 'TV-MA';
+export type Genre = 'Action' | 'Adventure' | 'Crime' | 'Drama' | 'Mystery' | 'Sci-Fi' | 'Comedy' | 'Romance' | 'War'
+
 export interface BaseDetails {
   id: string;
   // TODO: update to strict be 1-10
@@ -18,9 +21,8 @@ export interface SeasonContent {
 export interface Show extends BaseDetails {
   endDate: string;
   seasons: number;
-  seasonContent: SeasonContent[]
-  // Add for each eventually
-  showReview?: Seasons;
+  seasonContent: SeasonContent[];
+  genres: Genre[];
 }
 
 export interface Movie extends BaseDetails{
@@ -39,5 +41,3 @@ export interface ShowReview {
   bestCharacter: string;
   worstCharacter: string;
 }
-
-export type ParentGuideRatings = 'PG' | 'PG-13' | 'R' | 'NR' | 'TV-PG' | 'TV-14' | 'TV-MA';

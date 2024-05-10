@@ -11,9 +11,10 @@ export const modalStyles = {
     backgroundColor: 'lightgray',
     width: '50%',
     height: '60%',
-    overflow: 'hidden',
+    overflow: 'hidden'
   },
 };
+
 
 export const StyledHeader = styled.div`
   display: block;

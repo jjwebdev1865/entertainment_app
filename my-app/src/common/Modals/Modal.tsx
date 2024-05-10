@@ -17,16 +17,18 @@ export const EntertainmentModal = ({modalOpen, setModalOpen, details, type}: Ent
   const { modalStyles, StyledHeader } = styles;
   return (
     <Modal
-    ariaHideApp={false}
-    isOpen={modalOpen}
-    onRequestClose={() => setModalOpen(false)}
-    style={modalStyles}
-    aria={{
-      labelledby: 'modal-header',
-      describedby: 'modal-content',
-      modal: 'true'
-    }}
-  >
+      ariaHideApp={false}
+      isOpen={modalOpen}
+      closeTimeoutMS={200}
+      onRequestClose={() => setModalOpen(false)}
+      style={modalStyles}
+      aria={{
+        labelledby: 'modal-header',
+        describedby: 'modal-content',
+        modal: 'true'
+      }}
+      shouldCloseOnEsc={true}
+    >
     <div>
       <button onClick={() => setModalOpen(false)} style={{ float: 'right'}}>X</button>
     </div>
