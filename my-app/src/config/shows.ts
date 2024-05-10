@@ -1,11 +1,11 @@
 import * as images from '../assets/images/tv_image';
 import { Show } from '../types/models';
 import * as content from './tvContent';
-import * as reviews from './tvReviews';
 
 export const shows: Show[] = [
   {
     endDate: '2020',
+    genres: ['Action', 'Adventure', 'Crime', 'Drama', 'Mystery', 'Sci-Fi'],
     id: 'arrow',
     myRating: 7,
     rating: 'TV-14',
@@ -14,11 +14,11 @@ export const shows: Show[] = [
     title: 'Arrow',
     seasons: 8,
     poster: images.arrowImage,
-    showReview: reviews.arrowReview,
     seasonContent: content.arrowContent
   },
   {
     endDate: '2016',
+    genres: ['Comedy', 'Crime', 'Drama', 'Mystery', 'Romance'],
     id: 'castle',
     myRating: 10,
     rating: 'TV-14',
@@ -31,6 +31,7 @@ export const shows: Show[] = [
   },
   {
     endDate: 'Present',
+    genres: ['Action', 'Adventure', 'Drama', 'Sci-Fi', 'War'],
     id: 'fallout',
     myRating: 6,
     rating: 'TV-MA',
