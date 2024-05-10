@@ -1,14 +1,15 @@
-import { Movie } from '../../types/models';
-import { MovieModal } from '../MovieModal';
+import { Movie, Show } from '../../types/models';
+import { EntertainmentModal } from '../Modals/Modal';
 import { StyledMovieItem, StyledPoster } from './index.styles';
 import React, { useState } from 'react';
 
 type CardProps = {
-  movie: Movie;
+  details: Movie | Show;
+  type: 'movie' | 'show'
 };
 
-export const Card = ({ movie }: CardProps) => {
-  const { id, poster } = movie;
+export const Card = ({ details, type }: CardProps) => {
+  const { id, poster } = details;
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
@@ -17,11 +18,8 @@ export const Card = ({ movie }: CardProps) => {
         <StyledPoster src={poster} onClick={() => setModalOpen(!modalOpen)} />
       </StyledMovieItem>
 
-      <MovieModal 
-        modalOpen={modalOpen}
-        setModalOpen={setModalOpen}
-        movie={movie}
-      />
+      {type === 'movie' && <EntertainmentModal modalOpen={modalOpen} setModalOpen={setModalOpen} type='movie' details={details as Movie}/> }
+      {type === 'show' && <EntertainmentModal modalOpen={modalOpen} setModalOpen={setModalOpen} type='show' details={details as Show}/> }
     </>
   );
 };

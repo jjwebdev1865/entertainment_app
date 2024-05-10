@@ -20,7 +20,7 @@ describe('Card', () => {
   };
 
   it('renders a movie', () => {
-    render(<Card movie={mockMovie} />);
+    render(<Card details={mockMovie} type='movie' />);
     const movie = screen.getByTestId('movie-anyone-but-you');
     expect(movie).toBeVisible();
   });

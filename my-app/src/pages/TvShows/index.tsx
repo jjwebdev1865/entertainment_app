@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, TVCard } from '../../common';
+import { Card, Navbar } from '../../common';
 import { shows } from '../../config/shows';
 import styled from 'styled-components';
 
@@ -27,7 +27,8 @@ const TvShows = (): JSX.Element => {
         <section data-testid="shows-section">
           <StyledShowList>
             {shows.map((show) => (
-              <TVCard key={show.id} show={show} />
+              <Card key={show.id} type='show' details={show}/>
+              // <TVCard key={show.id} show={show} />
             ))}
           </StyledShowList>
         </section>

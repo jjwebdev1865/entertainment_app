@@ -60,7 +60,7 @@ export const Movies = (): JSX.Element => {
       <section data-testid="movies-section">
         <StyledMovieList data-testid="movies-list">
           {filteredMovies.map((movie) => {
-            return <Card key={movie.id} movie={movie} />;
+            return <Card key={movie.id} details={movie} type='movie' />;
           })}
         </StyledMovieList>
       </section>
