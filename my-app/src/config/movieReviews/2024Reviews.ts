@@ -44,6 +44,13 @@ export const theLibrarianJudasReview = `First thing I want to say is that I am a
   I still enjoy this concept and love Excalibur!
 `;
 
+export const madameWebReview = `I have liked Sydney Sweeney, Dakota Johnson, Adam Scott, and Emma Roberts in previous roles and I think in these roles they did good too.
+  This movie was a failed female power movie. I think this could have been done much better with the abilities of Madame Web.
+  The villian was a weak actor and protrayed poorly. The spider people seemed and looked pretty dumb too.
+  I think the three girls did a good job of acting like teenagers. Like they disobeyed Madame Web and thats something teenagers would do.
+  I think this is going to a be a film people expected to do well but bombed and wont be added to future MCU phases (which was the original plan).
+`;
+
 export const rebelMoonPartOneReview = `This movie had a stellar supporting cast. Charlie Hunnam is one of my favorite actors. 
   Anytime you see Djimon Hounsou, you know the movie is going to be good and he is going to play a hardass. 
   Ed Skrein plays a great villian and I see him playing more villian roles, he has the look and demeanor for it.
