@@ -38,8 +38,21 @@ export const shows: Show[] = [
     releaseYear: 2024,
     seen: '2024',
     title: 'Fallout',
-    seasons: 1,
+    seasons: 10,
     poster: images.falloutImage,
     seasonContent: content.falloutContent
+  },
+  {
+    endDate: '2017',
+    genres: ['Action', 'Adventure', 'Drama', 'Sci-Fi', 'War'],
+    id: 'smallville',
+    myRating: 8,
+    rating: 'TV-PG',
+    releaseYear: 2001,
+    seen: '2024',
+    title: 'Smallville',
+    seasons: 1,
+    poster: images.smallvilleImage,
+    seasonContent: content.smallvilleContent
   }
 ];

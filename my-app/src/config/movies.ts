@@ -96,6 +96,19 @@ export const movies: Movie[] = [
   },
   {
     favorite: false,
+    id: 'madame-web',
+    seen: '2024',
+    title: 'Madame Web',
+    actors: ['Dakota Johnson', 'Sydney Sweeney', 'Isabela Merced'],
+    poster: images.madameWebImage,
+    rating: 'PG-13',
+    releaseYear: 2024,
+    runTime: 116,
+    myRating: 1,
+    review: reviews2024.madameWebReview
+  },
+  {
+    favorite: false,
     id: 'rebel-moon-child-of-fire',
     seen: '2024',
     title: 'Rebel Moon - Part One: A Child of Fire',
