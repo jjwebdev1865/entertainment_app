@@ -2,7 +2,7 @@ import React, { ChangeEvent, useEffect, useState } from 'react';
 import { Button, SearchBar } from '../../common';
 import { Navbar } from '../../components';
 import { getMovies } from '../../api/local_api/filter';
-import { StyledMovieList, StyledRatingDropdown } from './Movies.styles';
+import { StyledMovieHeader, StyledMovieList } from './Movies.styles';
 import { Card } from '../../common/Card';
 import { Movie } from '../../types/models';
 
@@ -20,15 +20,15 @@ export const Movies = (): JSX.Element => {
     setSearchVal(lowerCaseSearch);
   };
 
-  const handleSearch = (input: string) => {
+  const handleSearch = () => {
     let filteredMovies = [] as Movie[];
 
-    if (input === '') {
+    if (searchVal === '') {
       console.log('input are undefined');
       filteredMovies = movies;
     } else {
       filteredMovies = movies.filter((movie) =>
-        movie.title.toLowerCase().includes(input),
+        movie.title.toLowerCase().includes(searchVal),
       );
     }
     setFilteredMovies(filteredMovies);
@@ -43,20 +43,20 @@ export const Movies = (): JSX.Element => {
     <div data-testid="movies">
       <Navbar />
 
-      <h1>Movies</h1>
-      <p style={{ color: 'red', fontWeight: 'bold', marginTop: '0px'}}>*NOTE: created in 2024 and quoting all movies as seen at start of that</p>
-      <StyledRatingDropdown data-testid="movie-filter-bar">
-        <SearchBar
-          searchVal={searchVal}
-          inputHandler={inputHandler}
-          handleClear={handleClear}
-        />
-        <Button
-          buttonText="Search"
-          searchVal={searchVal}
-          handleSearch={handleSearch}
-        />
-      </StyledRatingDropdown>
+      <StyledMovieHeader id='movies-header' >
+        <h1>Movies</h1>
+        <div id='movie-header-filter-bar'>
+          <SearchBar
+            searchVal={searchVal}
+            inputHandler={inputHandler}
+          />
+          <Button buttonText='Clear' handleClick={handleClear} />
+          <Button
+            buttonText="Search"
+            handleClick={handleSearch}
+          />
+        </div>
+      </StyledMovieHeader>
 
       <section data-testid="movies-section">
         <StyledMovieList data-testid="movies-list">

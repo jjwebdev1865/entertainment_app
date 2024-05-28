@@ -8,8 +8,7 @@ describe('SubmitButton', () => {
     render(
       <Button
         buttonText="Submit"
-        searchVal=""
-        handleSearch={jest.fn()}
+        handleClick={jest.fn()}
       />,
     );
     const element = screen.getByTestId('Submit-button');
