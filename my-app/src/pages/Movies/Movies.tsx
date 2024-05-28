@@ -21,17 +21,15 @@ export const Movies = (): JSX.Element => {
   };
 
   const handleSearch = () => {
-    let filteredMovies = [] as Movie[];
-
     if (searchVal === '') {
       console.log('input are undefined');
-      filteredMovies = movies;
+      setFilteredMovies(movies);
     } else {
-      filteredMovies = movies.filter((movie) =>
+      const filteredMovies = movies.filter((movie) =>
         movie.title.toLowerCase().includes(searchVal),
       );
+      setFilteredMovies(filteredMovies);
     }
-    setFilteredMovies(filteredMovies);
   };
 
   const handleClear = () => {
@@ -45,10 +43,11 @@ export const Movies = (): JSX.Element => {
 
       <StyledMovieHeader id='movies-header' >
         <h1>Movies</h1>
-        <div id='movie-header-filter-bar'>
+        <div id='movie-header-filter-bar' style={{ display: 'flex'}}>
           <SearchBar
             searchVal={searchVal}
             inputHandler={inputHandler}
+            handleClear={handleClear}
           />
           <Button buttonText='Clear' handleClick={handleClear} />
           <Button

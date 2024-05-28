@@ -27,9 +27,9 @@ export interface Show extends BaseDetails {
 
 export interface Movie extends BaseDetails{
   favorite: boolean;
+  genre: Genre;
   actors: string[];
   runTime: number;
-  
   review: string;
 }
 

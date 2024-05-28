@@ -16,7 +16,8 @@ describe('Card', () => {
     releaseYear: 2023,
     runTime: 103,
     myRating: 8,
-    review: 'nice work'
+    review: 'nice work',
+    genre: 'Comedy'
   };
 
   it('renders a movie', () => {
