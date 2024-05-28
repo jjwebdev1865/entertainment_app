@@ -1,12 +1,12 @@
 import React from 'react';
 
-type SearchBarProps = {
+type ButtonProps = {
   buttonText: string;
   searchVal: string;
   handleSearch: (input: string) => void;
 };
 
-export const SubmitButton = (props: SearchBarProps): JSX.Element => {
+export const Button = (props: ButtonProps): JSX.Element => {
   const { buttonText, searchVal, handleSearch } = props;
   return (
     <div>

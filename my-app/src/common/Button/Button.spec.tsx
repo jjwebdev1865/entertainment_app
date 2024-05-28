@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import React from 'react';
 import '@testing-library/jest-dom';
-import { SubmitButton } from './SubmitButton';
+import { Button } from './Button';
 
 describe('SubmitButton', () => {
   it('button is visible', () => {
     render(
-      <SubmitButton
+      <Button
         buttonText="Submit"
         searchVal=""
         handleSearch={jest.fn()}

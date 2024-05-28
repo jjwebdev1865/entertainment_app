@@ -51,7 +51,7 @@ export const shows: Show[] = [
     releaseYear: 2001,
     seen: '2024',
     title: 'Smallville',
-    seasons: 1,
+    seasons: 4,
     poster: images.smallvilleImage,
     seasonContent: content.smallvilleContent
   }

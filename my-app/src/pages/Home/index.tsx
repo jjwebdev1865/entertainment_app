@@ -1,7 +1,8 @@
 import React from 'react';
 import { getFavorites } from '../../api/local_api/filter';
 import { movies } from '../../config/movies';
-import { FavoritesTile, Navbar } from '../../common';
+import { Navbar } from '../../components';
+import { FavoritesTile } from '../../common';
 import styled from 'styled-components';
 
 const StyledFavorites = styled.ul`

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Card, Navbar } from '../../common';
+import { Card } from '../../common';
+import { Navbar } from '../../components';
 import { shows } from '../../config/shows';
 import * as styles from './TvShows.styles';
 import { Genre } from '../../types/models';

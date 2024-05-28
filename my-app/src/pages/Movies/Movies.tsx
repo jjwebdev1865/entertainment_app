@@ -1,5 +1,6 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
-import { Navbar, SearchBar, SubmitButton } from '../../common';
+import { Button, SearchBar } from '../../common';
+import { Navbar } from '../../components';
 import { getMovies } from '../../api/local_api/filter';
 import { StyledMovieList, StyledRatingDropdown } from './Movies.styles';
 import { Card } from '../../common/Card';
@@ -50,7 +51,7 @@ export const Movies = (): JSX.Element => {
           inputHandler={inputHandler}
           handleClear={handleClear}
         />
-        <SubmitButton
+        <Button
           buttonText="Search"
           searchVal={searchVal}
           handleSearch={handleSearch}
