@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 export const anyoneButYouImage = require('./movie_image_collection/anyone_but_you_image.jpg');
 export const aquaman_two = require('./movie_image_collection/aquaman_two_image.jpg');
+export const codeEight = require('./movie_image_collection/code_8.jpg');
+export const codeEightPartTwo = require('./movie_image_collection/code_8_part_2.jpg');
 export const duneImage = require('./movie_image_collection/dune_image.jpg');
 export const duneTwoImage = require('./movie_image_collection/dune_part_two.jpg');
 export const librarianOneImage = require('./movie_image_collection/the_librarian_one.jpg');

@@ -13,6 +13,19 @@ export const aquamanTwoReview = `Its been awhile since I have seen the movie as 
   The plot was weak, CGI sucked, and had a lot of terribly forced humor that lead to awkward scenes which is why i have this a 3/10.
 `;
 
+export const codeEightReview = `This movie has such a cool concept. The idea that a small portion of the population has superpowers is sweet.
+  The better part is the fact that they are closely monitored, restricted, and persecuted heavily. Robbie Amell plays a great role in hiding his powers.
+  He just wants to go unnoticed and live his life. His power growth is awesome. I think he does a great job fighting against his enemies and helping those around him.
+  The police being abusive is getting old in Hollywood but it does make sense in this movie. The acting here is great and i give this one a 7 out of 10!
+`;
+
+export const codeEightTwoReview = `I felt like the plotline for this one was a little weaker. I like how Stephen Amell's character partners with the police.
+  This to me is similar to a lot of movies where one character is trying to be righteous and justify the bad for the better of the community, like a twisted Robin hood.
+  Sirena Gulamgaus plays a cool role too, the tranmuter was a cool concept. I think the one in a million odds for it were a bit convienent, a higher chance would have been cooler.
+  Although her power did go unnoticed in the creation of the robot dogs. I think Stephen Amells role into the community center advisor shows a man seeking peace.
+  This one I give an 8 too because of the character development of the Amell brothers.
+`;
+
 export const duneReview = `This movie was a good start to a series. It did a good job explaining things to the audience and explained relationships to the crowd.
   Timothée Chalamet did a great job leading this star studded cast. Even Jason Momoa, whose character plays a small role in this file, helped support Paul Atreides.
   Oscar Isaac's did a good job of portraying the father, I have read only the first book but his father was supposed to be focused on the future.
