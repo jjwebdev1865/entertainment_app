@@ -1,10 +1,9 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
-import { Button, GenreBar, SearchBar } from '../../common';
-import { Navbar } from '../../components';
+import { Header, Navbar } from '../../components';
 import { getMovies } from '../../api/local_api/filter';
-import { StyledMovieHeader, StyledMovieList } from './Movies.styles';
+import { StyledMovieList } from './Movies.styles';
 import { Card } from '../../common/Card';
-import { Movie, Genre, genreList } from '../../types/models';
+import { Movie, Genre } from '../../types/models';
 
 export const Movies = (): JSX.Element => {
   const movies = getMovies();
@@ -54,15 +53,15 @@ export const Movies = (): JSX.Element => {
     <div data-testid="movies">
       <Navbar />
 
-      <StyledMovieHeader id='movies-header' >
-        <h1>Movies</h1>
-        <div id='movie-header-filter-bar' style={{ display: 'flex'}}>
-          <GenreBar handleGenre={handleGenre} genreFilter={genreFilter} genreOptions={genreList} />
-          <SearchBar searchVal={searchVal} inputHandler={inputHandler} handleClear={handleClear} />
-          <Button buttonText='Clear' handleClick={handleClear} />
-          <Button buttonText="Search" handleClick={handleSearch} />
-        </div>
-      </StyledMovieHeader>
+      <Header 
+        pageTitle='Movies' 
+        handleGenre={handleGenre} 
+        genreFilter={genreFilter} 
+        searchVal={searchVal} 
+        inputHandler={inputHandler} 
+        handleClear={handleClear}
+        handleSearch={handleSearch}
+      />
 
       <section data-testid="movies-section">
         <StyledMovieList data-testid="movies-list">

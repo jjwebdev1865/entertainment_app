@@ -1,9 +1,9 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
-import { Button, Card, GenreBar, SearchBar } from '../../common';
-import { Navbar } from '../../components';
+import { Card, } from '../../common';
+import { Header, Navbar } from '../../components';
 import { shows } from '../../config/shows';
 import * as styles from './TvShows.styles';
-import { Genre, Show, genreList } from '../../types/models';
+import { Genre, Show } from '../../types/models';
 
 const TvShows = (): JSX.Element => {
   const { StyledShowList } = styles;
@@ -52,15 +52,17 @@ const TvShows = (): JSX.Element => {
   return (
     <div>
       <Navbar />
-      <div>
-        <h1 data-testid="tv-show-header">TV Shows</h1>
-        <div id='movie-header-filter-bar' style={{ display: 'flex'}}>
-          <GenreBar handleGenre={handleGenre} genreFilter={genreFilter} genreOptions={genreList} />
-          <SearchBar searchVal={searchVal} inputHandler={inputHandler} handleClear={handleClear} />
-          <Button buttonText='Clear' handleClick={handleClear} />
-          <Button buttonText="Search" handleClick={handleSearch} />
-        </div>
-      </div>
+
+      <Header 
+        pageTitle='Shows' 
+        handleGenre={handleGenre} 
+        genreFilter={genreFilter} 
+        searchVal={searchVal} 
+        inputHandler={inputHandler} 
+        handleClear={handleClear}
+        handleSearch={handleSearch}
+      />
+
       <p style={{ color: 'red', fontWeight: 'bold', marginTop: '0px'}}>*NOTE: created in 2024 and quoting all movies as seen at start of that</p>
 
       <div>
