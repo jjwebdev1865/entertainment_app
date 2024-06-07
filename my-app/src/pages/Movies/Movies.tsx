@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
-import { Button, SearchBar } from '../../common';
+import { Button, GenreBar, SearchBar } from '../../common';
 import { Navbar } from '../../components';
 import { getMovies } from '../../api/local_api/filter';
 import { StyledMovieHeader, StyledMovieList } from './Movies.styles';
@@ -57,21 +57,10 @@ export const Movies = (): JSX.Element => {
       <StyledMovieHeader id='movies-header' >
         <h1>Movies</h1>
         <div id='movie-header-filter-bar' style={{ display: 'flex'}}>
-          <select onChange={handleGenre} value={genreFilter}>
-            <option>--Select a Genre--</option>
-            <option>Comedy</option>
-            <option>Sci-Fi</option>
-          </select>
-          <SearchBar
-            searchVal={searchVal}
-            inputHandler={inputHandler}
-            handleClear={handleClear}
-          />
+          <GenreBar handleGenre={handleGenre} genreFilter={genreFilter} genreOptions={['Comedy', 'Sci-Fi']} />
+          <SearchBar searchVal={searchVal} inputHandler={inputHandler} handleClear={handleClear} />
           <Button buttonText='Clear' handleClick={handleClear} />
-          <Button
-            buttonText="Search"
-            handleClick={handleSearch}
-          />
+          <Button buttonText="Search" handleClick={handleSearch} />
         </div>
       </StyledMovieHeader>
 
