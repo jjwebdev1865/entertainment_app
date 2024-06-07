@@ -1,5 +1,7 @@
 export type ParentGuideRatings = 'PG' | 'PG-13' | 'R' | 'NR' | 'TV-PG' | 'TV-14' | 'TV-MA';
-export type Genre = 'Action' | 'Adventure' | 'Crime' | 'Drama' | 'Mystery' | 'Sci-Fi' | 'Comedy' | 'Romance' | 'War'
+export type Genre = 'Action' | 'Comedy' | 'Sci-Fi';
+
+export const genreList: Genre[] = ['Action', 'Comedy', 'Sci-Fi'];
 
 export interface BaseDetails {
   id: string;
@@ -22,7 +24,7 @@ export interface Show extends BaseDetails {
   endDate: string;
   seasons: number;
   seasonContent: SeasonContent[];
-  genres: Genre[];
+  genre: Genre;
 }
 
 export interface Movie extends BaseDetails{

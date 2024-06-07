@@ -5,7 +5,7 @@ import * as content from './tvContent';
 export const shows: Show[] = [
   {
     endDate: '2020',
-    genres: ['Action', 'Adventure', 'Crime', 'Drama', 'Mystery', 'Sci-Fi'],
+    genre: 'Action',
     id: 'arrow',
     myRating: 7,
     rating: 'TV-14',
@@ -18,7 +18,7 @@ export const shows: Show[] = [
   },
   {
     endDate: '2016',
-    genres: ['Comedy', 'Crime', 'Drama', 'Mystery', 'Romance'],
+    genre: 'Comedy',
     id: 'castle',
     myRating: 10,
     rating: 'TV-14',
@@ -31,7 +31,7 @@ export const shows: Show[] = [
   },
   {
     endDate: 'Present',
-    genres: ['Action', 'Adventure', 'Drama', 'Sci-Fi', 'War'],
+    genre: 'Sci-Fi',
     id: 'fallout',
     myRating: 6,
     rating: 'TV-MA',
@@ -43,8 +43,21 @@ export const shows: Show[] = [
     seasonContent: content.falloutContent
   },
   {
+    endDate: 'Present',
+    genre: 'Sci-Fi',
+    id: 'shoresy',
+    myRating: 9,
+    rating: 'TV-MA',
+    releaseYear: 2002022,
+    seen: '2024',
+    title: 'Shoresy',
+    seasons: 3,
+    poster: images.shoresyImage,
+    seasonContent: content.shoresyContent
+  },
+  {
     endDate: '2017',
-    genres: ['Action', 'Adventure', 'Drama', 'Sci-Fi', 'War'],
+    genre: 'Sci-Fi',
     id: 'smallville',
     myRating: 8,
     rating: 'TV-PG',

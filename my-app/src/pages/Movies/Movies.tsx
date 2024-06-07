@@ -4,7 +4,7 @@ import { Navbar } from '../../components';
 import { getMovies } from '../../api/local_api/filter';
 import { StyledMovieHeader, StyledMovieList } from './Movies.styles';
 import { Card } from '../../common/Card';
-import { Genre, Movie } from '../../types/models';
+import { Movie, Genre, genreList } from '../../types/models';
 
 export const Movies = (): JSX.Element => {
   const movies = getMovies();
@@ -57,7 +57,7 @@ export const Movies = (): JSX.Element => {
       <StyledMovieHeader id='movies-header' >
         <h1>Movies</h1>
         <div id='movie-header-filter-bar' style={{ display: 'flex'}}>
-          <GenreBar handleGenre={handleGenre} genreFilter={genreFilter} genreOptions={['Comedy', 'Sci-Fi']} />
+          <GenreBar handleGenre={handleGenre} genreFilter={genreFilter} genreOptions={genreList} />
           <SearchBar searchVal={searchVal} inputHandler={inputHandler} handleClear={handleClear} />
           <Button buttonText='Clear' handleClick={handleClear} />
           <Button buttonText="Search" handleClick={handleSearch} />

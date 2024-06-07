@@ -10,11 +10,9 @@ interface GenreBarProps {
 
 export const GenreBar = ({ handleGenre, genreFilter, genreOptions }: GenreBarProps) => (
   <select onChange={handleGenre} value={genreFilter}>
+    <option>--Select a Genre--</option>
     {genreOptions.map(option => (
       <option key={`genre-bar-${option}`}>{option}</option>
     ))}
-    <option>--Select a Genre--</option>
-    <option>Comedy</option>
-    <option>Sci-Fi</option>
   </select>
 );
