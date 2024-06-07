@@ -1,16 +1,5 @@
 import styled from 'styled-components';
 
-export const StyledMovieHeader = styled.section`
-  display: flex;
-  align-items: center;
-
-  justify-content: space-between;
-  h1 {
-    font-size: 2rem;
-    margin: 10px 0px;
-  }
-`;
-
 export const StyledMovieList = styled.ul`
   list-style: none;
   display: flex;

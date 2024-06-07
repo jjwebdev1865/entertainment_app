@@ -34,7 +34,7 @@ export const movies: Movie[] = [
   {
     actors: ['Robbie Amell', 'Stephen Amell', 'Sung Kang'],
     favorite: false,
-    genre: 'Sci-Fi',
+    genre: 'Action',
     id: 'code-8',
     myRating: 7,
     poster: images.codeEight,
@@ -48,7 +48,7 @@ export const movies: Movie[] = [
   {
     actors: ['Robbie Amell', 'Stephen Amell', 'Alex Mallari Jr.'],
     favorite: false,
-    genre: 'Sci-Fi',
+    genre: 'Action',
     id: 'code-8-part-2',
     myRating: 8,
     poster: images.codeEightPartTwo,
@@ -132,7 +132,7 @@ export const movies: Movie[] = [
   {
     actors: ['Dakota Johnson', 'Sydney Sweeney', 'Isabela Merced'],
     favorite: false,
-    genre: 'Adventure',
+    genre: 'Sci-Fi',
     id: 'madame-web',
     myRating: 1,
     poster: images.madameWebImage,
