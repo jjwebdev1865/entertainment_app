@@ -4,7 +4,7 @@ import * as content from './tvContent';
 
 export const shows: Show[] = [
   {
-    endDate: '2020',
+    endDate: 2020,
     genre: 'Action',
     id: 'arrow',
     myRating: 7,
@@ -17,7 +17,7 @@ export const shows: Show[] = [
     seasonContent: content.arrowContent
   },
   {
-    endDate: '2016',
+    endDate: 2016,
     genre: 'Comedy',
     id: 'castle',
     myRating: 10,
@@ -43,8 +43,21 @@ export const shows: Show[] = [
     seasonContent: content.falloutContent
   },
   {
+    endDate: 2023,
+    genre: 'Action',
+    id: 'the-flash',
+    myRating: 7,
+    rating: 'TV-PG',
+    releaseYear: 2014,
+    seen: '2024',
+    title: 'Flash',
+    seasons: 10,
+    poster: images.flashImage,
+    seasonContent: content.flashContent
+  },
+  {
     endDate: 'Present',
-    genre: 'Sci-Fi',
+    genre: 'Comedy',
     id: 'shoresy',
     myRating: 9,
     rating: 'TV-MA',
@@ -56,7 +69,7 @@ export const shows: Show[] = [
     seasonContent: content.shoresyContent
   },
   {
-    endDate: '2017',
+    endDate: 2017,
     genre: 'Sci-Fi',
     id: 'smallville',
     myRating: 8,

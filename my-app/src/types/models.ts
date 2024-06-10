@@ -21,7 +21,7 @@ export interface SeasonContent {
 }
 
 export interface Show extends BaseDetails {
-  endDate: string;
+  endDate: number | 'Present';
   seasons: number;
   seasonContent: SeasonContent[];
   genre: Genre;
