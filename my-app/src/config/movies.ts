@@ -103,7 +103,7 @@ export const movies: Movie[] = [
   },
   {
     actors: ['Noah Wyle', 'Gabrielle Anwar', 'Bob Newhart'],
-    favorite: false,
+    favorite: true,
     genre: 'Comedy',
     id: 'the-librarian-return-to-king-solomons-mine',
     myRating: 7,
@@ -117,7 +117,7 @@ export const movies: Movie[] = [
   },
   {
     actors: ['Noah Wyle', 'Stana Katic', 'Bob Newhart'],
-    favorite: false,
+    favorite: true,
     genre: 'Comedy',
     id: 'the-librarian-the-curse-of-the-judas-chalice',
     myRating: 6,

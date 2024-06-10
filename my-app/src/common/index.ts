@@ -1,4 +1,3 @@
-export * from './FavoritesTile';
 export * from '../components/Navbar';
 export * from './SearchBar';
 export * from './Button';
