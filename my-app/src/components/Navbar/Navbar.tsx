@@ -34,6 +34,14 @@ export const Navbar = () => {
         About Me
       </NavLink>
       <NavLink
+        to="/actors"
+        style={({ isActive }) => ({
+          color: isActive ? '#0000ff' : '#000000',
+        })}
+      >
+        Actors
+      </NavLink>
+      <NavLink
         to="/movies"
         style={({ isActive }) => ({
           color: isActive ? '#0000ff' : '#000000',

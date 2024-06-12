@@ -43,3 +43,7 @@ export interface ShowReview {
   bestCharacter: string;
   worstCharacter: string;
 }
+
+export interface Actor {
+  name: string;
+}

@@ -200,7 +200,7 @@ export const movies: Movie[] = [
     title: 'Roadhouse',
   },
   {
-    actors: ['Glen Power', 'Zoey Duetch', 'Pete Davidson'],
+    actors: ['Glen Powell', 'Zoey Duetch', 'Pete Davidson'],
     favorite: false,
     genre: 'Comedy',
     id: 'set-it-up',

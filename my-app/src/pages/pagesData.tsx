@@ -4,6 +4,7 @@ import AboutMe from './AboutMe';
 import Home from './Home';
 import Movies from './Movies/Movies';
 import TvShows from './TvShows/TvShows';
+import { Actors } from './Actors/Actors';
 
 const pagesData: routerType[] = [
   {
@@ -25,6 +26,11 @@ const pagesData: routerType[] = [
     path: 'tv-shows',
     element: <TvShows />,
     title: 'tv shows',
+  },
+  {
+    path: 'actors',
+    element: <Actors />,
+    title: 'actors'
   },
 ];
 
