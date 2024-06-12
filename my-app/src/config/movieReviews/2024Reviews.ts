@@ -64,6 +64,14 @@ export const madameWebReview = `I have liked Sydney Sweeney, Dakota Johnson, Ada
   I think this is going to a be a film people expected to do well but bombed and wont be added to future MCU phases (which was the original plan).
 `;
 
+export const puppyLoveReview = `
+  Grant Gustin to me is Flash and its hard cause this role he played a completely opposite character, outside being a nerd.
+  The issue I had with Max (Gustin) was the way he accepted Nicole back after her huge fuck up. 
+  I'm all for second chances but for a girl you invite into your house, let her live with you, you pick up after her, and she still pulls that BS.
+  Could have gone with a lot different of a scenario I think.
+  My favorite character was actually Sid because he was playing the friend trying to help Max and get him out of the covid funk!
+`;
+
 export const rebelMoonPartOneReview = `This movie had a stellar supporting cast. Charlie Hunnam is one of my favorite actors. 
   Anytime you see Djimon Hounsou, you know the movie is going to be good and he is going to play a hardass. 
   Ed Skrein plays a great villian and I see him playing more villian roles, he has the look and demeanor for it.
@@ -81,6 +89,14 @@ export const rickyStanickyReview = `I honestly expected this to be complete dog 
 `;
 
 export const roadhouseReview = `TODO: rewatch. cant remember much besides the villian sucked, Gyllanhall was fucking awesome. and McGregor just played himself`;
+
+export const setItUpReview = `
+  Big Glen Powell fan ever since Anyone But You came out. This is prior to that by a few years but this cast is pretty good.
+  I think the comic duo of Pete Davidson and Glen Powell as roommates is comical, especially with Pete Davidson playing a gay guy.
+  The bosses goal is to look like horrible people and they accomplished that, although they are a bit immature for highly successful people.
+  I like how Zoey Duetch brings out the best in Powell's character, making him prioritize his life and change his outcome.
+  Good movie and is a good Rom Com. I would recommend it to others.
+`;
 
 export const wonkaReview = `I actually wasn't supposed to see this film. I was going to see another movie and the projector broke so I was given a ticket to Wonka.
   I did not expect it to be a musical but actually liked that part of the movie. The CGI was pretty good too, childish for a reason.
