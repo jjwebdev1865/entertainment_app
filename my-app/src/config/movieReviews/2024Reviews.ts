@@ -57,6 +57,13 @@ export const theLibrarianJudasReview = `First thing I want to say is that I am a
   I still enjoy this concept and love Excalibur!
 `;
 
+export const littleItalyReview = `I think this is a great adaption to Romeo and Juliet. The dueling pizza italian families is hilarious.
+  Emma Roberts and Hayden Christensen probably do the best at coming into their roles. The fake italian accents are pretty good too!
+  The grandparents hooking up behind the scenes is great. Also... LUIGI, enough said. 
+  Multiple laugh out loud moments here. The only issue i had with the movie was all pizza references, like its all they had.
+  Would definitely recommend this for anyone looking for a cute date night movie.
+`
+
 export const madameWebReview = `I have liked Sydney Sweeney, Dakota Johnson, Adam Scott, and Emma Roberts in previous roles and I think in these roles they did good too.
   This movie was a failed female power movie. I think this could have been done much better with the abilities of Madame Web.
   The villian was a weak actor and protrayed poorly. The spider people seemed and looked pretty dumb too.

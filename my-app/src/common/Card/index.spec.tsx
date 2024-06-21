@@ -13,6 +13,7 @@ describe('Card', () => {
     actors: ['Glen Powell', 'Sydney Sweeney'],
     poster: expect.any(Image),
     rating: 'R',
+    recentlyAddedReview: false,
     releaseYear: 2023,
     runTime: 103,
     myRating: 8,
