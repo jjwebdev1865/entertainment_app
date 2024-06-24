@@ -9,6 +9,7 @@ export interface BaseDetails {
   myRating: number; // 1 - 10
   poster: string;
   rating: ParentGuideRatings;
+  recentlyAddedReview: boolean;
   seen: string;
   title: string;
   releaseYear: number;
@@ -25,6 +26,7 @@ export interface Show extends BaseDetails {
   seasons: number;
   seasonContent: SeasonContent[];
   genre: Genre;
+  
 }
 
 export interface Movie extends BaseDetails{

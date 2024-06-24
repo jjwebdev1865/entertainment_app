@@ -1,9 +1,9 @@
 import { movies } from '../../config/movies';
-import { Movie } from '../../types/models';
+import { Movie, Show } from '../../types/models';
 
-type ListTypes = Movie;
+type ListTypes = Movie | Show;
 
-export const getFavorites = (list: ListTypes[]): ListTypes[] => {
+export const getFavorites = (list: Movie[]): Movie[] => {
   const favorites = list.filter((item) => item.favorite);
   return favorites;
 };

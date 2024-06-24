@@ -26,7 +26,12 @@ export const shoresyContent: SeasonContent[] = [
   },
   {
     season: 3,
-    actors: [],
-    review: `Coming soon.`
+    actors: ['Jared Keeso', 'Ryan McDonell', 'Tasya Teles', 'Harlan Blayne Kytwayhat', 'Blair Lamora', 'Keilani Elizabeth Rose'],
+    review: `This show continues to get better with each season. The cast chemistry continues to grow and get better.
+      The only thing you can't beat is time, and that is what this season is about. If you play contact sports, you're going to get hurt.
+      The interesting thing for me was the lack of Laura Moore scenes especially that they are are dating now.
+      I will say, the parts shes in are pretty good. This show always gets me back on a fitness mindset. Go til you can't go no more.
+      Great show for any hockey fan, comedy fan, or someone just looking for a good laugh!
+      `
   }
 ];

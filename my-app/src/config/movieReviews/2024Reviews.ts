@@ -76,6 +76,7 @@ export const puppyLoveReview = `
   The issue I had with Max (Gustin) was the way he accepted Nicole back after her huge fuck up. 
   I'm all for second chances but for a girl you invite into your house, let her live with you, you pick up after her, and she still pulls that BS.
   Could have gone with a lot different of a scenario I think.
+  I will say the chemistry once they get back together is great, especially during the delivery scene.
   My favorite character was actually Sid because he was playing the friend trying to help Max and get him out of the covid funk!
 `;
 

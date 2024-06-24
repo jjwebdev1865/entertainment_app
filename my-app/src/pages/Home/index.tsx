@@ -5,10 +5,17 @@ import { Navbar } from '../../components';
 // import { Carousel } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import { shows } from '../../config/shows';
+import { StyledCarouselContainer } from './Home.styles';
 
 const Home = (): JSX.Element => {
+  // const fullList = [...movies, ...shows]
+  // console.log(fullList )
   const favorites = getFavorites(movies);
-  const recentMovieReviews = getRecentReviews(movies)
+  const recentMovieReviews = getRecentReviews(movies);
+  const recentShowReviews = getRecentReviews(shows)
+  const allReviews = [...recentMovieReviews, ...recentShowReviews]
+  console.log(allReviews )
 
   const responsive = {
     superLargeDesktop: {
@@ -39,39 +46,44 @@ const Home = (): JSX.Element => {
         <h2>Recently Added Reviews</h2>
         {/* Explore this more later */}
         {/* <p>carousel from: https://www.npmjs.com/package/react-multi-carousel</p> */}
-        <Carousel 
-          responsive={responsive}
-          infinite={true}
-          autoPlay={true}
-          autoPlaySpeed={2500}
-          transitionDuration={500}
-        >
-          {recentMovieReviews.map(item => {
-            return (
-              <div key={`favorite-movie-${item.id}`}>
-                <img src={item.poster} height={500} width={400} />
-              </div>
-            );
-          })}
-        </Carousel>
+        <StyledCarouselContainer data-testid='carousel-container'>
+          <Carousel 
+            responsive={responsive}
+            infinite={true}
+            autoPlay={true}
+            autoPlaySpeed={2500}
+            transitionDuration={500}
+          >
+            {allReviews.map(item => {
+              return (
+                <div key={`favorite-movie-${item.id}`}>
+                  <img src={item.poster} height={400} width={300} />
+                </div>
+              );
+            })}
+          </Carousel>
+        </StyledCarouselContainer>
+        
         
         <h2>Movie Favorites</h2>
-
-        <Carousel 
-          responsive={responsive}
-          infinite={true}
-          autoPlay={true}
-          autoPlaySpeed={2500}
-          transitionDuration={500}
-        >
-          {favorites.map(item => {
-            return (
-              <div key={`favorite-movie-${item.id}`}>
-                <img src={item.poster} height={500} width={400} />
-              </div>
-            );
-          })}
-        </Carousel>;
+        <StyledCarouselContainer>
+          <Carousel 
+            responsive={responsive}
+            infinite={true}
+            autoPlay={true}
+            autoPlaySpeed={2500}
+            transitionDuration={500}
+          >
+            {favorites.map(item => {
+              return (
+                <div key={`favorite-movie-${item.id}`}>
+                  <img src={item.poster} height={400} width={300}  />
+                </div>
+              );
+            })}
+          </Carousel>;
+        </StyledCarouselContainer>
+        
       </div>
     </div>
   );
