@@ -7,6 +7,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { shows } from '../../config/shows';
 import { StyledCarouselContainer } from './Home.styles';
+import { Background } from '../../common';
 
 const Home = (): JSX.Element => {
   // const fullList = [...movies, ...shows]
@@ -40,9 +41,10 @@ const Home = (): JSX.Element => {
   return (
     <div>
       <Navbar />
-      <h1 data-testid="home-header">Home</h1>
-      <div>
+      <Background data-testid='background'>
+        <h1 data-testid="home-header">Home</h1>
 
+        <div>
         <h2>Recently Added Reviews</h2>
         {/* Explore this more later */}
         {/* <p>carousel from: https://www.npmjs.com/package/react-multi-carousel</p> */}
@@ -85,6 +87,9 @@ const Home = (): JSX.Element => {
         </StyledCarouselContainer>
         
       </div>
+      </Background>
+      
+      
     </div>
   );
 };

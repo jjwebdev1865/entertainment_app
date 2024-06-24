@@ -4,6 +4,7 @@ import { getMovies } from '../../api/local_api/filter';
 import { StyledMovieList } from './Movies.styles';
 import { Card } from '../../common/Card';
 import { Movie, Genre } from '../../types/models';
+import { Background } from '../../common';
 
 export const Movies = (): JSX.Element => {
   const movies = getMovies();
@@ -52,24 +53,27 @@ export const Movies = (): JSX.Element => {
   return (
     <div data-testid="movies">
       <Navbar />
+      <Background data-testid='background'>
+        <Header 
+          pageTitle='Movies' 
+          handleGenre={handleGenre} 
+          genreFilter={genreFilter} 
+          searchVal={searchVal} 
+          inputHandler={inputHandler} 
+          handleClear={handleClear}
+          handleSearch={handleSearch}
+        />
 
-      <Header 
-        pageTitle='Movies' 
-        handleGenre={handleGenre} 
-        genreFilter={genreFilter} 
-        searchVal={searchVal} 
-        inputHandler={inputHandler} 
-        handleClear={handleClear}
-        handleSearch={handleSearch}
-      />
+        <section data-testid="movies-section">
+          <StyledMovieList data-testid="movies-list">
+            {filteredMovies.map((movie) => {
+              return <Card key={movie.id} details={movie} type='movie' />;
+            })}
+          </StyledMovieList>
+        </section>
+      </Background>
 
-      <section data-testid="movies-section">
-        <StyledMovieList data-testid="movies-list">
-          {filteredMovies.map((movie) => {
-            return <Card key={movie.id} details={movie} type='movie' />;
-          })}
-        </StyledMovieList>
-      </section>
+      
     </div>
   );
 };

@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const StyledNavbar = styled.nav`
   background: #b3b3b3;
   padding: 25px;
+  text-align: center;
 
   a {
     color: black;

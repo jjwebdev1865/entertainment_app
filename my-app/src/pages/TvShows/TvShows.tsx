@@ -1,5 +1,5 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
-import { Card, } from '../../common';
+import { Background, Card, } from '../../common';
 import { Header, Navbar } from '../../components';
 import { shows } from '../../config/shows';
 import * as styles from './TvShows.styles';
@@ -53,25 +53,27 @@ const TvShows = (): JSX.Element => {
     <div>
       <Navbar />
 
-      <Header 
-        pageTitle='Shows' 
-        handleGenre={handleGenre} 
-        genreFilter={genreFilter} 
-        searchVal={searchVal} 
-        inputHandler={inputHandler} 
-        handleClear={handleClear}
-        handleSearch={handleSearch}
-      />
+      <Background data-testid='background'>
+        <Header 
+          pageTitle='Shows' 
+          handleGenre={handleGenre} 
+          genreFilter={genreFilter} 
+          searchVal={searchVal} 
+          inputHandler={inputHandler} 
+          handleClear={handleClear}
+          handleSearch={handleSearch}
+        />
 
-      <p style={{ color: 'red', fontWeight: 'bold', marginTop: '0px'}}>*NOTE: created in 2024 and quoting all movies as seen at start of that</p>
+        <p style={{ color: 'red', fontWeight: 'bold', marginTop: '0px'}}>*NOTE: created in 2024 and quoting all movies as seen at start of that</p>
 
-      <div>
         <section data-testid="shows-section">
           <StyledShowList>
             {filteredShows.map(show => <Card key={show.id} type='show' details={show}/>)}
           </StyledShowList>
         </section>
-      </div>
+      </Background>
+
+      
     </div>
   );
 };
