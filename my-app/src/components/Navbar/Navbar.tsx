@@ -18,6 +18,7 @@ const StyledNavbar = styled.nav`
 
 export const Navbar = () => {
   const bookValue = useFeatureFlag('Books')
+  const actorFFValue = useFeatureFlag('Actors')
 
   return (
     <StyledNavbar data-testid="nav-bar-container">
@@ -37,14 +38,13 @@ export const Navbar = () => {
       >
         About Me
       </NavLink>
-      <NavLink
-        to="/actors"
-        style={({ isActive }) => ({
+      {actorFFValue &&
+       <NavLink to="/actors" style={({ isActive }) => ({
           color: isActive ? '#0000ff' : '#000000',
-        })}
-      >
-        Actors
-      </NavLink>
+        })}>
+          Actors
+        </NavLink>
+      }
       <NavLink
         to="/movies"
         style={({ isActive }) => ({
@@ -67,7 +67,8 @@ export const Navbar = () => {
           color: isActive ? '#0000ff' : '#000000',
         })}>
           Books
-        </NavLink>}
+        </NavLink>
+      }
     </StyledNavbar>
   );
 };
