@@ -2,7 +2,6 @@ import React from 'react';
 import { getFavorites, getRecentReviews } from '../../api/local_api/filter';
 import { movies } from '../../config/movies';
 import { Navbar } from '../../components';
-// import { Carousel } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { shows } from '../../config/shows';
@@ -10,13 +9,10 @@ import { StyledCarouselContainer } from './Home.styles';
 import { Background } from '../../common';
 
 const Home = (): JSX.Element => {
-  // const fullList = [...movies, ...shows]
-  // console.log(fullList )
   const favorites = getFavorites(movies);
   const recentMovieReviews = getRecentReviews(movies);
   const recentShowReviews = getRecentReviews(shows)
   const allReviews = [...recentMovieReviews, ...recentShowReviews]
-  console.log(allReviews )
 
   const responsive = {
     superLargeDesktop: {

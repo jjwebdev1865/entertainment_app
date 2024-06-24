@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import { useFeatureFlag } from '@harnessio/ff-react-client-sdk'
 
 const StyledNavbar = styled.nav`
   background: #b3b3b3;
@@ -16,6 +17,8 @@ const StyledNavbar = styled.nav`
 `;
 
 export const Navbar = () => {
+  const bookValue = useFeatureFlag('Books')
+
   return (
     <StyledNavbar data-testid="nav-bar-container">
       <NavLink
@@ -57,7 +60,14 @@ export const Navbar = () => {
         })}
       >
         TV Shows
-      </NavLink>
+      </NavLink>   
+
+      {bookValue &&
+       <NavLink to="/books" style={({ isActive }) => ({
+          color: isActive ? '#0000ff' : '#000000',
+        })}>
+          Books
+        </NavLink>}
     </StyledNavbar>
   );
 };
