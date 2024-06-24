@@ -15,7 +15,7 @@ export const Card = ({ details, type }: CardProps) => {
   return (
     <>
       <StyledMovieItem key={id} data-testid={`movie-${id}`}>
-        <StyledPoster src={poster} onClick={() => setModalOpen(!modalOpen)} />
+        <StyledPoster data-testid={`movie-${id}-poster`} src={poster} onClick={() => setModalOpen(!modalOpen)} />
       </StyledMovieItem>
 
       {type === 'movie' && <EntertainmentModal modalOpen={modalOpen} setModalOpen={setModalOpen} type='movie' details={details as Movie}/> }

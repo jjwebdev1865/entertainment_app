@@ -9,7 +9,7 @@ interface GenreBarProps {
 }
 
 export const GenreBar = ({ handleGenre, genreFilter, genreOptions }: GenreBarProps): JSX.Element => (
-  <select onChange={handleGenre} value={genreFilter}>
+  <select data-testid='genre-bar-filter' onChange={handleGenre} value={genreFilter}>
     <option>--Select a Genre--</option>
     {genreOptions.map(option => (
       <option key={`genre-bar-${option}`}>{option}</option>

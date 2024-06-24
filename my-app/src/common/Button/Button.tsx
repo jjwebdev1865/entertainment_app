@@ -5,14 +5,11 @@ type ButtonProps = {
   handleClick: () => void;
 };
 
-export const Button = (props: ButtonProps): JSX.Element => {
-  const { buttonText, handleClick } = props;
-  return (
-    <button
-      data-testid={`${buttonText}-button`}
-      onClick={() => handleClick()}
-    >
-      {buttonText}
-    </button>
-  );
-};
+export const Button = ({buttonText, handleClick }: ButtonProps): JSX.Element => (
+  <button
+    data-testid={`${buttonText}-button`}
+    onClick={() => handleClick()}
+  >
+    {buttonText}
+  </button>
+);

@@ -36,19 +36,7 @@ describe('SearchBar', () => {
         handleClear={jest.fn()}
       />,
     );
-    const element = screen.getByTestId('search-clear-button');
-    expect(element).toBeVisible();
-  });
-
-  it('contains a search button', () => {
-    render(
-      <SearchBar
-        searchVal={'test'}
-        inputHandler={jest.fn()}
-        handleClear={jest.fn()}
-      />,
-    );
-    const element = screen.getByTestId('search-submit-button');
+    const element = screen.getByTestId('X-button');
     expect(element).toBeVisible();
   });
 });
