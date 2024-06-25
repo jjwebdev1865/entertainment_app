@@ -6,6 +6,7 @@ import Movies from './Movies/Movies';
 import TvShows from './TvShows/TvShows';
 import { Actors } from './Actors/Actors';
 import { Books } from './Books/Books';
+import { VideoGames } from './VideoGames/VideoGames';
 
 const pagesData: routerType[] = [
   {
@@ -37,6 +38,11 @@ const pagesData: routerType[] = [
     path: 'books',
     element: <Books />,
     title: 'books'
+  },
+  {
+    path: 'video-games',
+    element: <VideoGames />,
+    title: 'video games'
   }
 ];
 

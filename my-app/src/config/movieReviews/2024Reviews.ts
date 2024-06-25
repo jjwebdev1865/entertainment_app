@@ -13,6 +13,13 @@ export const aquamanTwoReview = `Its been awhile since I have seen the movie as 
   The plot was weak, CGI sucked, and had a lot of terribly forced humor that lead to awkward scenes which is why i have this a 3/10.
 `;
 
+export const blueBeetleReview = `I had heard some bad things about this movie but I generally liked it. 
+  I think Xolo Maridueña, Jaime Reyes, played a great role and a good representation of how the character is portrayed in other DC shows.
+  I didnt like the two villians. Seemed like this was a hispanic aimed movie, why not just make the villian hispanic as well?
+  George Lopez cracked me up as a kid and continued so in this movie. He played the crazy uncle and this is a great cast.
+  I give this movie a 6 out of 10 because the cast was perfect but the whole family being involved later was dumb and Jaime in the cartoons / comics wants to protect his family.
+`;
+
 export const codeEightReview = `This movie has such a cool concept. The idea that a small portion of the population has superpowers is sweet.
   The better part is the fact that they are closely monitored, restricted, and persecuted heavily. Robbie Amell plays a great role in hiding his powers.
   He just wants to go unnoticed and live his life. His power growth is awesome. I think he does a great job fighting against his enemies and helping those around him.
@@ -62,7 +69,7 @@ export const littleItalyReview = `I think this is a great adaption to Romeo and 
   The grandparents hooking up behind the scenes is great. Also... LUIGI, enough said. 
   Multiple laugh out loud moments here. The only issue i had with the movie was all pizza references, like its all they had.
   Would definitely recommend this for anyone looking for a cute date night movie.
-`
+`;
 
 export const madameWebReview = `I have liked Sydney Sweeney, Dakota Johnson, Adam Scott, and Emma Roberts in previous roles and I think in these roles they did good too.
   This movie was a failed female power movie. I think this could have been done much better with the abilities of Madame Web.

@@ -36,6 +36,21 @@ export const movies: Movie[] = [
     title: 'Aquaman and the Lost Kingdom',
   },
   {
+    actors: ['Xolo Maridueña', 'Bruna Marquezine', 'George Lopez'],
+    favorite: false,
+    genre: 'Comedy',
+    id: 'blue-beetle',
+    myRating: 3,
+    poster: images.blueBeetleImage,
+    rating: 'PG-13',
+    recentlyAddedReview: true, // 1
+    releaseYear: 2023,
+    review: reviews2024.blueBeetleReview,
+    runTime: 127,
+    seen: '2024',
+    title: 'Blue Beetle',
+  },
+  {
     actors: ['Robbie Amell', 'Stephen Amell', 'Sung Kang'],
     favorite: false,
     genre: 'Action',
@@ -148,7 +163,7 @@ export const movies: Movie[] = [
     myRating: 8,
     poster: images.littleItalyImage,
     rating: 'R',
-    recentlyAddedReview: true, // 1
+    recentlyAddedReview: true, // 2
     releaseYear: 2018,
     review: reviews2024.littleItalyReview,
     runTime: 102,

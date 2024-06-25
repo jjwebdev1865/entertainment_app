@@ -1,4 +1,3 @@
-export * from '../components/Navbar';
 export * from './SearchBar';
 export * from './Button';
 export * from './Card';
