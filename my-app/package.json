@@ -31,8 +31,8 @@
     "lint:fix": "eslint \"src/**/*.{ts,tsx}\" --fix",
     "format": "npx prettier --write .",
     "test": "react-scripts test",
-    "test: all": "react-scripts test --watchAll=false -u",
-    "test: coverage": "test: all --coverage"
+    "test:all": "react-scripts test --watchAll=false -u",
+    "test:coverage": "test: all --coverage"
   },
   "eslintConfig": {
     "extends": [

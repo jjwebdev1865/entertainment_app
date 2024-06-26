@@ -110,4 +110,4 @@ export const actors: Actor[] = [
     name: 'Zendaya'
   }
 
-]
+];

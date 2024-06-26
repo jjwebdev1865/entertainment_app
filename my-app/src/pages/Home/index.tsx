@@ -11,8 +11,8 @@ import { Background } from '../../common';
 const Home = (): JSX.Element => {
   const favorites = getFavorites(movies);
   const recentMovieReviews = getRecentReviews(movies);
-  const recentShowReviews = getRecentReviews(shows)
-  const allReviews = [...recentMovieReviews, ...recentShowReviews]
+  const recentShowReviews = getRecentReviews(shows);
+  const allReviews = [...recentMovieReviews, ...recentShowReviews];
 
   const responsive = {
     superLargeDesktop: {
@@ -38,7 +38,7 @@ const Home = (): JSX.Element => {
     <div>
       <Navbar />
       <Background data-testid='background'>
-        <h1 data-testid="home-header">Home</h1>
+        <h1 data-testid="home-header" style={{ textAlign: 'center'}}>Home</h1>
 
         <div>
         <h2>Recently Added Reviews</h2>

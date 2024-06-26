@@ -19,4 +19,4 @@ export const AboutMeDescriptionBar = styled.div`
     text-align: center;
     text-decoration: underline;
   }
-`
+`;

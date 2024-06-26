@@ -1,25 +1,119 @@
-import { render, screen } from '@testing-library/react';
-import { Navbar } from './Navbar';
-import React from 'react';
 import '@testing-library/jest-dom';
+import { fireEvent, render, screen } from '@testing-library/react';
+import { Navbar } from './Navbar';
+import * as router from 'react-router';
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+
 
 describe('Navbar', () => {
-  it('contains the right navbar pages', () => {
-    render(<Navbar />);
-    const HomeLinkElement = screen.getByRole('link', { name: 'Home' });
-    const AboutMeLinkElement = screen.getByRole('link', { name: 'About Me' });
-    const ActorsLinkElement = screen.getByRole('link', { name: 'Actors' });
-    const MoviesLinkElement = screen.getByRole('link', { name: 'Movies' });
-    const TvShowsLinkElement = screen.getByRole('link', { name: 'Tv Shows' });
-    const BooksLinkElement = screen.getByRole('link', { name: 'Books' });
-    const VideoGamesLinkElement = screen.getByRole('link', { name: 'Video games' });
+  const mockedNavigation = jest.fn();
 
-    expect(HomeLinkElement).toBeInTheDocument();
-    expect(AboutMeLinkElement).toBeInTheDocument();
-    expect(ActorsLinkElement).toBeInTheDocument();
-    expect(MoviesLinkElement).toBeInTheDocument();
-    expect(TvShowsLinkElement).toBeInTheDocument();
-    expect(BooksLinkElement).toBeInTheDocument();
-    expect(BooksLinkElement).toBeInTheDocument();
+  beforeEach(() => {
+    jest.spyOn(router, 'useNavigate').mockImplementation(() => mockedNavigation
+  )})
+
+  const MockedNav = () => {
+    return(
+      <Router>
+          <Navbar />
+      </Router>
+    )
+  }
+
+  it('should navigate to the about me page', () => {
+    const { getByText } = render(<Navbar />, { wrapper: Router });
+    fireEvent.click(getByText(/About Me/i));
+
+    expect(mockedNavigation).toHaveBeenCalledWith(
+      "/about-me",
+      {
+        preventScrollReset: undefined,
+        relative: undefined,
+        replace: false,
+        state: undefined,
+        unstable_viewTransition: undefined
+      }
+    );
+  });
+
+  it('should navigate to the actors page', () => {
+    const { getByText } = render(<Navbar />, { wrapper: Router });
+    fireEvent.click(getByText(/Actors/i));
+
+    expect(mockedNavigation).toHaveBeenCalledWith(
+      "/actors",
+      {
+        preventScrollReset: undefined,
+        relative: undefined,
+        replace: false,
+        state: undefined,
+        unstable_viewTransition: undefined
+      }
+    );
+  });
+
+  it('should navigate to the movies page', () => {
+    const { getByText } = render(<Navbar />, { wrapper: Router });
+    fireEvent.click(getByText(/Movies/i));
+
+    expect(mockedNavigation).toHaveBeenCalledWith(
+      "/movies",
+      {
+        preventScrollReset: undefined,
+        relative: undefined,
+        replace: false,
+        state: undefined,
+        unstable_viewTransition: undefined
+      }
+    );
+  });
+
+  it('should navigate to the tv shows page', () => {
+    const { getByText } = render(<Navbar />, { wrapper: Router });
+    fireEvent.click(getByText(/TV Shows/i));
+
+    expect(mockedNavigation).toHaveBeenCalledWith(
+      "/tv-shows",
+      {
+        preventScrollReset: undefined,
+        relative: undefined,
+        replace: false,
+        state: undefined,
+        unstable_viewTransition: undefined
+      }
+    );
+  });
+
+  it('should navigate to the books page', () => {
+    const { getByText } = render(<Navbar />, { wrapper: Router });
+    fireEvent.click(getByText(/Books/i));
+
+    expect(mockedNavigation).toHaveBeenCalledWith(
+      "/books",
+      {
+        preventScrollReset: undefined,
+        relative: undefined,
+        replace: false,
+        state: undefined,
+        unstable_viewTransition: undefined
+      }
+    );
+  });
+
+  it('should navigate to the video games page', () => {
+    const { getByText } = render(<Navbar />, { wrapper: Router });
+    fireEvent.click(getByText(/Video Games/i));
+
+    expect(mockedNavigation).toHaveBeenCalledWith(
+      "/video-games",
+      {
+        preventScrollReset: undefined,
+        relative: undefined,
+        replace: false,
+        state: undefined,
+        unstable_viewTransition: undefined
+      }
+    );
   });
 });

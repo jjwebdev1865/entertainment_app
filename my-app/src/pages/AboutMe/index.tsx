@@ -11,7 +11,7 @@ const whyAppDescription = `
   I started this app as a way to grow on my react development skills and to track the content I watch or read.
   I am a software engineer whose primary language now is Typescript and primary framework is React.
   I have a passion for Fantasy, Science Fiction, and Comedy (guilty of being a Rom Com fan).
-`
+`;
 const featureSoftwareDescription = `
   This is a React application with a typescript base. 
   I have become a fan of styled-components recently and like the flexibility of them.
@@ -20,7 +20,7 @@ const featureSoftwareDescription = `
   One of my favorite discoveries was react-multi-carousel, which is used on the home page for carouseling my movie posters.
   Check it out!
   Future tech advances will include unit test coverage, full pipeline integration, and cypress additions
-`
+`;
 
 const AboutMe = () => {
   return (

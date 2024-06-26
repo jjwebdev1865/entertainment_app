@@ -11,4 +11,4 @@ export const Background = styled.div`
     rgba(145, 14, 115, 1) 50%,
     rgba(185, 125, 1, 1) 100%
   );
-`
+`;
