@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Background } from "../../common";
 import { Actor } from "../../types/models";
 import { actors } from "../../config/actors";
-import { Navbar } from "../../components";
+import { ItemList, Navbar } from "../../components";
 
 export const Actors = (): JSX.Element => {
   const [filteredActors, setFilteredActors] = useState([] as Actor[]);
@@ -17,14 +17,8 @@ export const Actors = (): JSX.Element => {
       <Navbar />
 
       <Background data-testid='background'>
-        <section data-testid="movies-section">
-          <ul data-testid="movies-list">
-            {filteredActors.map((actor) => {
-              return <li key={`actor-${actor.name}`}>{actor.name}</li>;
-              // return <Card key={movie.id} details={movie} type='movie' />;
-            })}
-          </ul>
-        </section>
+        <h1>Actors</h1>
+        <ItemList sectionId='movies-section' itemList={filteredActors} type='actors' />
       </Background>
     </div>
   );

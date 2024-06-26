@@ -1,12 +1,12 @@
 import React from "react";
-import { Movie, Show } from "../../types/models";
+import { Actor, Movie, Show } from "../../types/models";
 import { Card } from "../../common";
 import { StyledItemListSection, StyledItemList } from "./ItemList.styles";
 
 interface ItemListProps {
   sectionId: string
-  itemList: Movie[] | Show[]
-  type: 'movie' | 'show'
+  itemList: Movie[] | Show[] | Actor[]
+  type: 'movie' | 'show' | 'actors'
 }
 
 export const ItemList = (props: ItemListProps) => {
@@ -19,5 +19,5 @@ export const ItemList = (props: ItemListProps) => {
         })}
       </StyledItemList>
     </StyledItemListSection>
-  )
-}
+  );
+};

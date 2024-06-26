@@ -62,8 +62,6 @@ const TvShows = (): JSX.Element => {
           handleSearch={handleSearch}
         />
 
-        <p style={{ color: 'red', fontWeight: 'bold', marginTop: '0px'}}>*NOTE: created in 2024 and quoting all movies as seen at start of that</p>
-
         <ItemList sectionId='shows-section' itemList={filteredShows} type='show' />
 
       </Background>

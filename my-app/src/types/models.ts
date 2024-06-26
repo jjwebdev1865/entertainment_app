@@ -48,5 +48,7 @@ export interface ShowReview {
 }
 
 export interface Actor {
+  id: string;
   name: string;
+  poster: string;
 }

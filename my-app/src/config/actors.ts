@@ -1,113 +1,44 @@
 import { Actor } from "../types/models";
+import * as images from '../assets/images/actors';
+import { v4 as uuidv4 } from 'uuid';
+
 
 export const actors: Actor[] = [
   {
-    name: 'Yahya Abdul-Mateen II'
+    id: uuidv4(),
+    name: 'Glen Powell',
+    poster: images.glenPowellImage
   },
   {
-    name: 'Robbie Amell'
+    id: uuidv4(),
+    name: 'Sydney Sweeney',
+    poster: images.sydneySweeneyImage
   },
   {
-    name: 'Stephen Amell'
+    id: uuidv4(),
+    name: 'Stephen Amell',
+    poster: images.stephenAmellImage
   },
   {
-    name: 'Gabrielle Anwar'
+    id: uuidv4(),
+    name: 'Robbie Amell',
+    poster: images.robbieAmellImage
   },
   {
-    name: 'Sofia Boutella'
+    id: uuidv4(),
+    name: 'Jason Momoa',
+    poster: images.jasonMomoaImage
   },
   {
-    name: 'John Cena'
+    id: uuidv4(),
+    name: 'Xolo Maridueña',
+    poster: images.xoloMariduenaImage
   },
   {
-    name: 'Timothée Chalamet'
-  },
-  {
-    name: 'Pete Davidson'
-  },
-  {
-    name: 'Nore Davis'
-  },
-  {
-    name: 'Gustave Die'
-  },
-  {
-    name: 'Zoey Duetch'
-  },
-  {
-    name: 'Zac Efron'
-  },
-  {
-    name: 'Rebecca Ferguson'
-  },
-  {
-    name: 'Gata'
-  },
-  {
-    name: 'Grant Gustin'
-  },
-  {
-    name: 'Jake Gyllenhaal'
-  },
-  {
-    name: 'Lucy Hale'
-  },
-  {
-    name: 'Charlie Hunnam'
-  },
-  {
-    name: 'Dakota Johnson'
-  },
-  {
-    name: 'Sung Kang'
-  },
-  {
-    name: 'Stana Katic'
-  },
-  {
-    name: 'Keegan-Michael Key'
-  },
-  {
-    name: 'Alex Mallari Jr.'
-  },
-  {
-    name: 'Jason Mamoa'
-  },
-  {
-    name: 'Conor McGregor'
-  },
-  {
-    name: 'Daniela Melchior'
-  },
-  {
-    name: 'Isabela Merced'
-  },
-  {
-    name: 'Bob Newhart'
-  },
-  {
-    name: 'Glen Powell'
-  },
-  {
-    name: 'Andrew Santino'
-  },
-  {
-    name: 'Ed Skrein'
-  },
-  {
-    name: 'Sydney Sweeney'
-  },
-  {
-    name: 'Sonya Walger'
-  },
-  {
-    name: 'Patrick Wilson'
-  },
-  {
-    name: 'Noah Wyle'
-  },
-  {
-    name: 'Zendaya'
+    id: uuidv4(),
+    name: 'Bruna Marquezine',
+    poster: images.brunaMarquezineImage
   }
+  
 
 ];

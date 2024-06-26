@@ -1,11 +1,11 @@
-import { Movie, Show } from '../../types/models';
+import { Actor, Movie, Show } from '../../types/models';
 import { EntertainmentModal } from '../Modals/Modal';
 import { StyledMovieItem, StyledPoster } from './index.styles';
 import React, { useState } from 'react';
 
 type CardProps = {
-  details: Movie | Show;
-  type: 'movie' | 'show'
+  details: Movie | Show | Actor;
+  type: 'movie' | 'show' | 'actors'
 };
 
 export const Card = ({ details, type }: CardProps) => {

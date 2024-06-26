@@ -7,6 +7,7 @@ export const StyledMovieItem = styled.li`
 export const StyledPoster = styled.img`
   width: 100%;
   height: 100%;
+  /* max-height: 450px; */
 `;
 
 export const modalStyles = {
