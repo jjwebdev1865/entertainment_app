@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+export const StyledMovieSection = styled.section`
+  min-height: 85vh;
+`
+
 export const StyledMovieList = styled.ul`
   list-style: none;
   display: flex;

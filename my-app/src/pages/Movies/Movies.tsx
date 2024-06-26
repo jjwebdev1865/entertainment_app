@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
-import { Header, Navbar } from '../../components';
+import { Header, ItemList, Navbar } from '../../components';
 import { getMovies } from '../../api/local_api/filter';
-import { StyledMovieList } from './Movies.styles';
+import { StyledMovieList, StyledMovieSection } from './Movies.styles';
 import { Card } from '../../common/Card';
 import { Movie, Genre } from '../../types/models';
 import { Background } from '../../common';
@@ -64,13 +64,15 @@ export const Movies = (): JSX.Element => {
           handleSearch={handleSearch}
         />
 
-        <section data-testid="movies-section">
+        {/* <StyledMovieSection data-testid="movies-section">
           <StyledMovieList data-testid="movies-list">
             {filteredMovies.map((movie) => {
               return <Card key={movie.id} details={movie} type='movie' />;
             })}
           </StyledMovieList>
-        </section>
+        </StyledMovieSection> */}
+
+        <ItemList sectionId='movies-section' itemList={filteredMovies} type='movie' />
       </Background>
 
       
