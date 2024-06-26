@@ -1,12 +1,12 @@
 import React from "react";
-import { Movie } from "../../types/models";
+import { Movie, Show } from "../../types/models";
 import { Card } from "../../common";
 import { StyledItemListSection, StyledItemList } from "./ItemList.styles";
 
 interface ItemListProps {
   sectionId: string
-  itemList: Movie[]
-  type: 'movie'
+  itemList: Movie[] | Show[]
+  type: 'movie' | 'show'
 }
 
 export const ItemList = (props: ItemListProps) => {

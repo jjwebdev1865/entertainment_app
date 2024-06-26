@@ -1,12 +1,10 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
-import { Background, Card, } from '../../common';
-import { Header, Navbar } from '../../components';
+import { Background } from '../../common';
+import { Header, ItemList, Navbar } from '../../components';
 import { shows } from '../../config/shows';
-import * as styles from './TvShows.styles';
 import { Genre, Show } from '../../types/models';
 
 const TvShows = (): JSX.Element => {
-  const { StyledShowList } = styles;
   const [filteredShows, setFilteredShows] = useState([] as Show[]);
   const [searchVal, setSearchVal] = useState('');
   const [genreFilter, setGenreFilter] = useState('' as Genre | string);
@@ -66,11 +64,8 @@ const TvShows = (): JSX.Element => {
 
         <p style={{ color: 'red', fontWeight: 'bold', marginTop: '0px'}}>*NOTE: created in 2024 and quoting all movies as seen at start of that</p>
 
-        <section data-testid="shows-section">
-          <StyledShowList>
-            {filteredShows.map(show => <Card key={show.id} type='show' details={show}/>)}
-          </StyledShowList>
-        </section>
+        <ItemList sectionId='shows-section' itemList={filteredShows} type='show' />
+
       </Background>
 
       
