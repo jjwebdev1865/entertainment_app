@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 
 type CardProps = {
   details: Movie | Show | Actor;
-  type: 'movie' | 'show' | 'actors'
+  type: 'movie' | 'show' | 'actor'
 };
 
 export const Card = ({ details, type }: CardProps) => {
@@ -20,6 +20,7 @@ export const Card = ({ details, type }: CardProps) => {
 
       {type === 'movie' && <EntertainmentModal modalOpen={modalOpen} setModalOpen={setModalOpen} type='movie' details={details as Movie}/> }
       {type === 'show' && <EntertainmentModal modalOpen={modalOpen} setModalOpen={setModalOpen} type='show' details={details as Show}/> }
+      {type === 'actor' && <EntertainmentModal modalOpen={modalOpen} setModalOpen={setModalOpen} type='actor' details={details as Actor}/> }
     </>
   );
 };

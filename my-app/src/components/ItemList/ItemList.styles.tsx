@@ -12,7 +12,7 @@ export const StyledItemList = styled.ul`
   display: grid;
   grid-template-columns: 23% 23% 23% 23%;
   grid-gap: 2%;
-  row-gap: 1%;
+  row-gap: 2%;
   overflow: auto;
   
   li {

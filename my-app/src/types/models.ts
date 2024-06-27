@@ -51,4 +51,7 @@ export interface Actor {
   id: string;
   name: string;
   poster: string;
+  filmography: string[]
+  favoriteRole: string
+  title: string;
 }

@@ -6,7 +6,7 @@ import { StyledItemListSection, StyledItemList } from "./ItemList.styles";
 interface ItemListProps {
   sectionId: string
   itemList: Movie[] | Show[] | Actor[]
-  type: 'movie' | 'show' | 'actors'
+  type: 'movie' | 'show' | 'actor'
 }
 
 export const ItemList = (props: ItemListProps) => {

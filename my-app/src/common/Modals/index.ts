@@ -1,2 +1,2 @@
-export * from './MovieModal';
-export * from './ShowModal';
+export * from './MovieModal/MovieModal';
+export * from './ShowModal/ShowModal';

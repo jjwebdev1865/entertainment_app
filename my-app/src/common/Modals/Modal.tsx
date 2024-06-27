@@ -1,15 +1,16 @@
 import React, { Dispatch, SetStateAction } from "react";
-import { Movie, Show } from "../../types/models";
+import { Actor, Movie, Show } from "../../types/models";
 import Modal from 'react-modal';
 import * as styles from './Modal.styles';
-import { MovieModal } from "./MovieModal";
-import { ShowModal } from "./ShowModal";
+import { MovieModal } from "./MovieModal/MovieModal";
+import { ShowModal } from "./ShowModal/ShowModal";
+import { ActorModal } from "./ActorModal/ActorModal";
 
 type EntertainmentModalProps = {
   modalOpen: boolean;
   setModalOpen: Dispatch<SetStateAction<boolean>>;
-  type: 'movie' | 'show';
-  details: Movie | Show;
+  type: 'movie' | 'show' | 'actor';
+  details: Movie | Show | Actor;
 };
 
 // NOTE: aria react-modal documentation: https://reactcommunity.org/react-modal/accessibility/
@@ -35,8 +36,11 @@ export const EntertainmentModal = ({modalOpen, setModalOpen, details, type}: Ent
     <StyledHeader id='modal-header-container'>
       <h1 id='modal-header'>{details.title}</h1>
     </StyledHeader>
+
     {type === 'movie' && <MovieModal movie={details as Movie} />}
     {type === 'show' && <ShowModal show={details as Show} />}
+    {type === 'actor' && <ActorModal actor={details as Actor} />}
+
   </Modal>
   );
 };

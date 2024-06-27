@@ -18,7 +18,7 @@ export const Actors = (): JSX.Element => {
 
       <Background data-testid='background'>
         <h1>Actors</h1>
-        <ItemList sectionId='movies-section' itemList={filteredActors} type='actors' />
+        <ItemList sectionId='movies-section' itemList={filteredActors} type='actor' />
       </Background>
     </div>
   );
