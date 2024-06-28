@@ -43,7 +43,7 @@ export const movies: Movie[] = [
     myRating: 3,
     poster: images.blueBeetleImage,
     rating: 'PG-13',
-    recentlyAddedReview: true, // 1
+    recentlyAddedReview: true, // 2
     releaseYear: 2023,
     review: reviews2024.blueBeetleReview,
     runTime: 127,
@@ -142,7 +142,7 @@ export const movies: Movie[] = [
   },
   {
     actors: ['Noah Wyle', 'Stana Katic', 'Bob Newhart'],
-    favorite: true,
+    favorite: false,
     genre: 'Comedy',
     id: 'the-librarian-the-curse-of-the-judas-chalice',
     myRating: 6,
@@ -157,13 +157,13 @@ export const movies: Movie[] = [
   },
   {
     actors: ['Noah Wyle', 'Stana Katic', 'Bob Newhart'],
-    favorite: true,
+    favorite: false,
     genre: 'Comedy',
     id: 'little-italy',
     myRating: 8,
     poster: images.littleItalyImage,
     rating: 'R',
-    recentlyAddedReview: true, // 2
+    recentlyAddedReview: true, // 3
     releaseYear: 2018,
     review: reviews2024.littleItalyReview,
     runTime: 102,
@@ -259,6 +259,21 @@ export const movies: Movie[] = [
     runTime: 105,
     seen: '2024',
     title: 'Set It Up',
+  },
+  {
+    actors: ['Zac Efron', 'Miles Teller', 'Michael B. Jordan'],
+    favorite: true,
+    genre: 'Comedy',
+    id: 'that-awkward-moment',
+    myRating: 9.5,
+    poster: images.thatAwkwardMomentImage,
+    rating: 'R',
+    recentlyAddedReview: true, //1
+    releaseYear: 2014,
+    review: reviews2024.thatAwkwardMomentReview,
+    runTime: 95,
+    seen: '2024',
+    title: 'That Awkward Moment',
   },
   {
     actors: ['Timothée Chalamet', 'Gustave Die', 'Keegan-Michael Key'],

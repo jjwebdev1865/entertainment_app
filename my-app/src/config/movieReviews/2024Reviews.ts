@@ -113,6 +113,15 @@ export const setItUpReview = `
   Good movie and is a good Rom Com. I would recommend it to others.
 `;
 
+export const thatAwkwardMomentReview = `
+  Love this movie. I have it on amazon prime since i love to watch it. I think the guy group sums up how guys act in their mid twenties.
+  Every guy group has guys in different phases of life but they never let that get to them.
+  Zac Efrons character I relate to the most. He has the place that everyone hangs out at, does his best at his career, and always done to help his friends.
+  Miles Teller is awesome and you see his stardom continue to grow here. His early career he played the non serious fun guy and killed it.
+  Micheal B. Jordan is an awesome actor and showed it here; 
+  his portrail of trying to get back with his friends and dealing with a tough life situation was done to perfection.
+`
+
 export const wonkaReview = `I actually wasn't supposed to see this film. I was going to see another movie and the projector broke so I was given a ticket to Wonka.
   I did not expect it to be a musical but actually liked that part of the movie. The CGI was pretty good too, childish for a reason.
   Keegan-Michael Key played a great role and was hilarious (as always) at it. How he steadily gained weight cracked me up. It was a good addition.

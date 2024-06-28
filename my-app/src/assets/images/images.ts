@@ -16,4 +16,5 @@ export const rebelMoonImage = require('./movie_image_collection/rebel_moon_p_1.j
 export const rickyStanickyImage = require('./movie_image_collection/ricky_stanicky_image.jpg');
 export const roadhouseNewImage = require('./movie_image_collection/roadhouse_new_image.jpg');
 export const setItUpImage = require('./movie_image_collection/Set_It_Up_poster.jpg');
+export const thatAwkwardMomentImage = require('./movie_image_collection/that_awkward_moment.jpg');
 export const wonkaImage = require('./movie_image_collection/wonka_image.jpg');
