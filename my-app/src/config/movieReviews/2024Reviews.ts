@@ -120,7 +120,7 @@ export const thatAwkwardMomentReview = `
   Miles Teller is awesome and you see his stardom continue to grow here. His early career he played the non serious fun guy and killed it.
   Micheal B. Jordan is an awesome actor and showed it here; 
   his portrail of trying to get back with his friends and dealing with a tough life situation was done to perfection.
-`
+`;
 
 export const wonkaReview = `I actually wasn't supposed to see this film. I was going to see another movie and the projector broke so I was given a ticket to Wonka.
   I did not expect it to be a musical but actually liked that part of the movie. The CGI was pretty good too, childish for a reason.

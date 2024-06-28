@@ -54,4 +54,5 @@ export interface Actor {
   filmography: string[]
   favoriteRole: string
   title: string;
+  review?: string;
 }

@@ -1,8 +1,8 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
-import { Background } from '../../common';
-import { Header, ItemList, Navbar } from '../../components';
+import { Background, Button, GenreBar, SearchBar } from '../../common';
+import { ItemList, Navbar, HeaderTwo } from '../../components';
 import { shows } from '../../config/shows';
-import { Genre, Show } from '../../types/models';
+import { Genre, Show, genreList } from '../../types/models';
 
 const TvShows = (): JSX.Element => {
   const [filteredShows, setFilteredShows] = useState([] as Show[]);
@@ -52,18 +52,25 @@ const TvShows = (): JSX.Element => {
       <Navbar />
 
       <Background data-testid='background'>
-        <Header 
-          pageTitle='Shows' 
-          handleGenre={handleGenre} 
-          genreFilter={genreFilter} 
-          searchVal={searchVal} 
-          inputHandler={inputHandler} 
-          handleClear={handleClear}
-          handleSearch={handleSearch}
-        />
+      <HeaderTwo title="Actors">
+          <GenreBar 
+            handleGenre={handleGenre} 
+            genreFilter={genreFilter} 
+            genreOptions={genreList} 
+          />
+
+          <SearchBar 
+            searchVal={searchVal} 
+            inputHandler={inputHandler} 
+            handleClear={handleClear} 
+            placeholderText='Search for Show'
+          />
+
+          <Button buttonText='Clear' handleClick={handleClear} />
+          <Button buttonText="Search" handleClick={handleSearch} />
+        </HeaderTwo>
 
         <ItemList sectionId='shows-section' itemList={filteredShows} type='show' />
-
       </Background>
 
       

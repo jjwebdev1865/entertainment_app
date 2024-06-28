@@ -1,8 +1,8 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
-import { Header, ItemList, Navbar } from '../../components';
+import { ItemList, Navbar, HeaderTwo } from '../../components';
 import { getMovies } from '../../api/local_api/filter';
-import { Movie, Genre } from '../../types/models';
-import { Background } from '../../common';
+import { Movie, Genre, genreList } from '../../types/models';
+import { Background, Button, GenreBar, SearchBar } from '../../common';
 
 export const Movies = (): JSX.Element => {
   const movies = getMovies();
@@ -51,16 +51,25 @@ export const Movies = (): JSX.Element => {
   return (
     <div data-testid="movies">
       <Navbar />
+
       <Background data-testid='background'>
-        <Header 
-          pageTitle='Movies' 
-          handleGenre={handleGenre} 
-          genreFilter={genreFilter} 
-          searchVal={searchVal} 
-          inputHandler={inputHandler} 
-          handleClear={handleClear}
-          handleSearch={handleSearch}
-        />
+        <HeaderTwo title="Actors">
+          <GenreBar 
+            handleGenre={handleGenre} 
+            genreFilter={genreFilter} 
+            genreOptions={genreList} 
+          />
+
+          <SearchBar 
+            searchVal={searchVal} 
+            inputHandler={inputHandler} 
+            handleClear={handleClear} 
+            placeholderText='Search for Movie'
+          />
+
+          <Button buttonText='Clear' handleClick={handleClear} />
+          <Button buttonText="Search" handleClick={handleSearch} />
+        </HeaderTwo>
 
         <ItemList sectionId='movies-section' itemList={filteredMovies} type='movie' />
       </Background>
