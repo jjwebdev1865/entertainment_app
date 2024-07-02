@@ -2,13 +2,18 @@ import React, { ChangeEvent, useEffect, useState } from 'react';
 import { ItemList, Navbar, HeaderTwo } from '../../components';
 import { getMovies } from '../../api/local_api/filter';
 import { Movie, Genre, genreList } from '../../types/models';
-import { Background, Button, GenreBar, SearchBar } from '../../common';
+import { Background, Button, Checkbox, GenreBar, SearchBar } from '../../common';
+import Carousel from 'react-multi-carousel';
+import { responsiveCarouselSizes } from '../Home';
+import { StyledMovieCarousel } from './Movies.styles';
+
 
 export const Movies = (): JSX.Element => {
   const movies = getMovies();
   const [searchVal, setSearchVal] = useState('');
   const [filteredMovies, setFilteredMovies] = useState([] as Movie[]);
   const [genreFilter, setGenreFilter] = useState('' as Genre | string);
+  const [isShowAllChecked, setIsShowAllChecked] = useState(true);
 
   useEffect(() => {
     setFilteredMovies(movies);
@@ -48,12 +53,19 @@ export const Movies = (): JSX.Element => {
     setGenreFilter(e.target.value);
   };
 
+  const isCheckedChangeHandler = () => {
+    setIsShowAllChecked(!isShowAllChecked);
+  };
+
   return (
     <div data-testid="movies">
       <Navbar />
 
       <Background data-testid='background'>
         <HeaderTwo title="Actors">
+
+          <Checkbox labelText='Show All' isChecked={isShowAllChecked} changeHandler={isCheckedChangeHandler} />
+
           <GenreBar 
             handleGenre={handleGenre} 
             genreFilter={genreFilter} 
@@ -71,7 +83,27 @@ export const Movies = (): JSX.Element => {
           <Button buttonText="Search" handleClick={handleSearch} />
         </HeaderTwo>
 
-        <ItemList sectionId='movies-section' itemList={filteredMovies} type='movie' />
+        { isShowAllChecked ? (
+          <ItemList sectionId='movies-section' itemList={filteredMovies} type='movie' />
+        ) : (
+          <StyledMovieCarousel data-testid='carousel-container'>
+            <Carousel 
+              responsive={responsiveCarouselSizes}
+              infinite={true}
+              autoPlay={true}
+              autoPlaySpeed={2500}
+              transitionDuration={500}
+            >
+              {filteredMovies.map(movie => {
+                return (
+                  <div key={`favorite-movie-${movie.id}`}>
+                    <img src={movie.poster} height={400} width={300} />
+                  </div>
+                );
+              })}
+            </Carousel>
+          </StyledMovieCarousel>
+        )}
       </Background>
 
       

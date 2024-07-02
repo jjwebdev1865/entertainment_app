@@ -32,6 +32,20 @@ export const shows: Show[] = [
     seasonContent: content.castleContent
   },
   {
+    endDate: 2012,
+    genre: 'Comedy',
+    id: 'chuck',
+    myRating: 9,
+    rating: 'TV-14',
+    recentlyAddedReview: true, 
+    releaseYear: 2007,
+    seen: '2024',
+    title: 'Chuck',
+    seasons: 5,
+    poster: images.chuckImage,
+    seasonContent: content.ChuckContent
+  },
+  {
     endDate: 'Present',
     genre: 'Sci-Fi',
     id: 'fallout',
@@ -58,6 +72,20 @@ export const shows: Show[] = [
     seasons: 10,
     poster: images.flashImage,
     seasonContent: content.flashContent
+  },
+  {
+    endDate: 2016,
+    genre: 'Comedy',
+    id: 'mike-and-molly',
+    myRating: 8,
+    rating: 'TV-14',
+    recentlyAddedReview: true, 
+    releaseYear: 2010,
+    seen: '2024',
+    title: 'Mike & Molly',
+    seasons: 6,
+    poster: images.mikeAndMollyImage,
+    seasonContent: content.mikeAndMollyContent
   },
   {
     endDate: 2015,
