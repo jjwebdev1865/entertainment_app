@@ -1,7 +1,7 @@
 import React from 'react';
 import { routerType } from '../types/router.types';
 import AboutMe from './AboutMe';
-import Home from './Home';
+import Home from './Home/Home';
 import Movies from './Movies/Movies';
 import TvShows from './TvShows/TvShows';
 import { Actors } from './Actors/Actors';

@@ -1,12 +1,11 @@
 import { Actor } from "../types/models";
 import * as images from '../assets/images/actors';
-import { v4 as uuidv4 } from 'uuid';
 import * as actorsReviews from './actorReviews';
 
-
+// Next new actor id: 11
 export const actors: Actor[] = [
   {
-    id: uuidv4(),
+    id: 1,
     name: 'Robbie Amell',
     title: 'Robbie Amell',
     poster: images.robbieAmellImage,
@@ -15,7 +14,7 @@ export const actors: Actor[] = [
     review: actorsReviews.robbieAmellReview
   },
   {
-    id: uuidv4(),
+    id: 2,
     name: 'Stephen Amell',
     title: 'Stephen Amell',
     poster: images.stephenAmellImage,
@@ -24,7 +23,25 @@ export const actors: Actor[] = [
     review: actorsReviews.stephenAmellReview
   },
   {
-    id: uuidv4(),
+    id: 8,
+    name: 'Zac Efron',
+    title: 'Zac Efron',
+    poster: images.zacEfronImage,
+    filmography: ['The Awkward Moment'],
+    favoriteRole: 'Jason in That Awkward Moment',
+    review: actorsReviews.zacEfronReview
+  },
+  {
+    id: 10,
+    name: 'Michael B. Jordan',
+    title: 'Michael B. Jordan',
+    poster: images.michealBJordanImage,
+    filmography: ['The Awkward Moment'],
+    favoriteRole: 'Mikey in That Awkward Moment',
+    review: actorsReviews.michealBJordanReview
+  },
+  {
+    id: 3,
     name: 'Xolo Maridueña',
     title: 'Xolo Maridueña',
     poster: images.xoloMariduenaImage,
@@ -33,7 +50,7 @@ export const actors: Actor[] = [
     review: actorsReviews.xoloMariduenaReview
   },
   {
-    id: uuidv4(),
+    id: 4,
     name: 'Bruna Marquezine',
     title: 'Bruna Marquezine',
     poster: images.brunaMarquezineImage,
@@ -42,7 +59,7 @@ export const actors: Actor[] = [
     review: actorsReviews.brunaMarquezineReview
   },
   {
-    id: uuidv4(),
+    id: 5,
     name: 'Jason Momoa',
     title: 'Jason Momoa',
     poster: images.jasonMomoaImage,
@@ -51,7 +68,7 @@ export const actors: Actor[] = [
     review: 'TODO'
   },
   {
-    id: uuidv4(),
+    id: 6,
     name: 'Glen Powell',
     title: 'Glen Powell',
     poster: images.glenPowellImage,
@@ -60,7 +77,7 @@ export const actors: Actor[] = [
     review: actorsReviews.glenPowellReview
   },
   {
-    id: uuidv4(),
+    id: 7,
     name: 'Sydney Sweeney',
     title: 'Sydney Sweeney',
     poster: images.sydneySweeneyImage,
@@ -68,4 +85,13 @@ export const actors: Actor[] = [
     favoriteRole: 'Bea in Anyone But You',
     review: actorsReviews.sydneySweeneyReview
   },
+  {
+    id: 9,
+    name: 'Miles Teller',
+    title: 'Miles Teller',
+    poster: images.milesTellerImage,
+    filmography: ['That Awkward Moment'],
+    favoriteRole: 'Daniel in That Awkward Moment',
+    review: actorsReviews.milesTellerReview
+  }
 ];

@@ -48,7 +48,7 @@ export interface ShowReview {
 }
 
 export interface Actor {
-  id: string;
+  id: number;
   name: string;
   poster: string;
   filmography: string[]

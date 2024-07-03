@@ -1,12 +1,14 @@
 import React, { ChangeEvent, useEffect, useState } from "react";
-import { Background, Button, SearchBar } from "../../common";
+import { Background, Button, Checkbox, SearchBar } from "../../common";
 import { Actor } from "../../types/models";
 import { actors } from "../../config/actors";
-import { ItemList, Navbar, HeaderTwo } from "../../components";
+import { ItemList, Navbar, HeaderTwo, ContentCarousel } from "../../components";
+import { StyledCarouselContainer } from "./Actors.styles";
 
 export const Actors = (): JSX.Element => {
   const [filteredActors, setFilteredActors] = useState([] as Actor[]);
   const [searchVal, setSearchVal] = useState('');
+  const [isShowAllChecked, setIsShowAllChecked] = useState(false);
 
   useEffect(() => {
     setFilteredActors(actors);
@@ -33,12 +35,18 @@ export const Actors = (): JSX.Element => {
     setFilteredActors(actors);
   };
 
+  const isCheckedChangeHandler = () => {
+    setIsShowAllChecked(!isShowAllChecked);
+  };
+
   return (
     <div data-testid="movies">
       <Navbar />
 
       <Background data-testid='background'>
         <HeaderTwo title="Actors">
+          <Checkbox labelText='Show All' isChecked={isShowAllChecked} changeHandler={isCheckedChangeHandler} />
+
           <SearchBar 
             searchVal={searchVal} 
             inputHandler={inputHandler} 
@@ -50,7 +58,14 @@ export const Actors = (): JSX.Element => {
           <Button buttonText="Search" handleClick={handleSearch} />
         </HeaderTwo>
 
-        <ItemList sectionId='movies-section' itemList={filteredActors} type='actor' />
+        { isShowAllChecked 
+          ? <ItemList sectionId='actors-section' itemList={filteredActors} type='actor' />
+          : (
+            <StyledCarouselContainer>
+              <ContentCarousel contentList={filteredActors} />
+            </StyledCarouselContainer>
+          )
+        }
       </Background>
     </div>
   );

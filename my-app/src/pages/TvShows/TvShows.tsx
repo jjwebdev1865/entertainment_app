@@ -1,13 +1,15 @@
 import React, { ChangeEvent, useEffect, useState } from 'react';
-import { Background, Button, GenreBar, SearchBar } from '../../common';
-import { ItemList, Navbar, HeaderTwo } from '../../components';
+import { Background, Button, Checkbox, GenreBar, SearchBar } from '../../common';
+import { ItemList, Navbar, HeaderTwo, ContentCarousel } from '../../components';
 import { shows } from '../../config/shows';
 import { Genre, Show, genreList } from '../../types/models';
+import { StyledCarouselContainer } from './TvShows.styles';
 
 const TvShows = (): JSX.Element => {
   const [filteredShows, setFilteredShows] = useState([] as Show[]);
   const [searchVal, setSearchVal] = useState('');
   const [genreFilter, setGenreFilter] = useState('' as Genre | string);
+  const [isShowAllChecked, setIsShowAllChecked] = useState(false);
 
   useEffect(() => {
     setFilteredShows(shows);
@@ -47,17 +49,22 @@ const TvShows = (): JSX.Element => {
     }
   };
 
+  const isCheckedChangeHandler = () => {
+    setIsShowAllChecked(!isShowAllChecked);
+  };
+
   return (
     <div>
       <Navbar />
 
       <Background data-testid='background'>
       <HeaderTwo title="Actors">
-          <GenreBar 
-            handleGenre={handleGenre} 
-            genreFilter={genreFilter} 
-            genreOptions={genreList} 
-          />
+        <Checkbox labelText='Show All' isChecked={isShowAllChecked} changeHandler={isCheckedChangeHandler} />
+        <GenreBar 
+          handleGenre={handleGenre} 
+          genreFilter={genreFilter} 
+          genreOptions={genreList} 
+        />
 
           <SearchBar 
             searchVal={searchVal} 
@@ -70,7 +77,14 @@ const TvShows = (): JSX.Element => {
           <Button buttonText="Search" handleClick={handleSearch} />
         </HeaderTwo>
 
-        <ItemList sectionId='shows-section' itemList={filteredShows} type='show' />
+        { isShowAllChecked 
+          ? <ItemList sectionId='shows-section' itemList={filteredShows} type='show' />
+          : (
+            <StyledCarouselContainer>
+              <ContentCarousel contentList={filteredShows} />
+            </StyledCarouselContainer>
+          )
+        }
       </Background>
 
       

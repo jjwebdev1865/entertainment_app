@@ -10,3 +10,7 @@ export const StyledHeaderContainer = styled.section`
     margin: 10px 0px;
   }
 `;
+
+export const StyledFilterBar = styled.div`
+  display: flex;
+`;
