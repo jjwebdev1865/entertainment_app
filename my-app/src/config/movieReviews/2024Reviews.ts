@@ -113,6 +113,31 @@ export const setItUpReview = `
   Good movie and is a good Rom Com. I would recommend it to others.
 `;
 
+export const starwarsOneReview = `
+  I want it noted that I have always preferred the prequels to the original trilogy.
+  I think this initial movie has grown one me once i got older. I liked it. I think its a great first movie in a trilogy.
+  I think the casting is great, the transition to find Anakin Skywalker, and how Anakin becomes Obi-wons apprentice is well written.
+  The Gungan war is pretty cool as well as showing the Padme was a tough and skilled leader.
+  I gave this a 6 because it is in fact a start to a trilogy, which typically includes mostly set up and character building.
+`;
+
+export const starwarsTwoReview = `
+  I want it noted that I have always preferred the prequels to the original trilogy.
+  This is a great second film. 10 years has passed and Anakin is now an accomplished apprentice.
+  You can tell he has an ego, which Hayden Christensen portrays well! 
+  The way he plays a conflicted mentee, he knows he is more powerful and more skilled, but sees Obiwon like a father and respects him.
+  The Clone element was dope and how they have been prepared without the jedis knowledge adds such a twist.
+  The inclusion of Mace Windu and Yoda as more involved characters helps build the fans knowledge of how the order works.
+`;
+
+export const starwarsThreeReview = `
+  I want it noted that I have always preferred the prequels to the original trilogy.
+  This movie is awesome. Peak CGI.
+  The way this film shows the corruption has spread and that people do follow a leader without question is insane.
+  The lightsaber battles here are the best. Hayden and Ewan were the perfect cast it turned out because they became the best and learned to sword fight.
+  This is a 10. Its a perfect movie. The plot, the castings, the twists, and the setup for the original trilogy is great.
+`;
+
 export const thatAwkwardMomentReview = `
   Love this movie. I have it on amazon prime since i love to watch it. I think the guy group sums up how guys act in their mid twenties.
   Every guy group has guys in different phases of life but they never let that get to them.

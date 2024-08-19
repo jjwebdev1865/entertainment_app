@@ -29,7 +29,7 @@ interface ContentCarouselProps {
 // carousel from: https://www.npmjs.com/package/react-multi-carousel
 export const ContentCarousel = ({ contentList }: ContentCarouselProps) => {
   return (
-    <div>
+    <div style={{ padding: '0 24px'}}>
       <Carousel 
         responsive={responsiveCarouselSizes}
         infinite={true}

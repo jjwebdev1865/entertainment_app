@@ -17,5 +17,8 @@ export const StyledItemList = styled.ul`
   
   li {
     height: 100%;
+    max-height: 440px;
+    min-height: 425px;
+    max-width: 290px;
   }
 `;
