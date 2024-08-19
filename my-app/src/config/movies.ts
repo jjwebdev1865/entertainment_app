@@ -43,7 +43,7 @@ export const movies: Movie[] = [
     myRating: 3,
     poster: images.blueBeetleImage,
     rating: 'PG-13',
-    recentlyAddedReview: true, // 2
+    recentlyAddedReview: true, // 3
     releaseYear: 2023,
     review: reviews2024.blueBeetleReview,
     runTime: 127,
@@ -163,7 +163,7 @@ export const movies: Movie[] = [
     myRating: 8,
     poster: images.littleItalyImage,
     rating: 'R',
-    recentlyAddedReview: true, // 3
+    recentlyAddedReview: false, 
     releaseYear: 2018,
     review: reviews2024.littleItalyReview,
     runTime: 102,
@@ -268,12 +268,27 @@ export const movies: Movie[] = [
     myRating: 9.5,
     poster: images.thatAwkwardMomentImage,
     rating: 'R',
-    recentlyAddedReview: true, //1
+    recentlyAddedReview: true, // 2
     releaseYear: 2014,
     review: reviews2024.thatAwkwardMomentReview,
     runTime: 95,
     seen: '2024',
     title: 'That Awkward Moment',
+  },
+  {
+    actors: ['Glen Powell', 'Daisy Edgar-Jones', 'Anthony Ramos'],
+    favorite: true,
+    genre: 'Comedy',
+    id: 'twisters-2024',
+    myRating: 8,
+    poster: images.twistersImage,
+    rating: 'PG-13',
+    recentlyAddedReview: true, // 1 
+    releaseYear: 2024,
+    review: reviews2024.wonkaReview,
+    runTime: 122,
+    seen: '2024',
+    title: 'Twisters',
   },
   {
     actors: ['Timothée Chalamet', 'Gustave Die', 'Keegan-Michael Key'],
