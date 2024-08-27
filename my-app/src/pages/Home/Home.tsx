@@ -16,17 +16,16 @@ const Home = (): JSX.Element => {
     <div>
       <Navbar />
       <StyledBackground data-testid='background'>
-        <h1 data-testid="home-header" style={{ textAlign: 'center'}}>Home</h1>
 
         <div>
-        <h2>Recently Added Reviews</h2>
-        <ContentCarousel contentList={allReviews} />
+          <h2>Recently Added Reviews</h2>
+          <ContentCarousel contentList={allReviews} />
+          
+          
+          <h2>Movie Favorites</h2>
+          <ContentCarousel contentList={favorites} />
         
-        
-        <h2>Movie Favorites</h2>
-        <ContentCarousel contentList={favorites} />
-        
-      </div>
+        </div>
       </StyledBackground>   
     </div>
   );

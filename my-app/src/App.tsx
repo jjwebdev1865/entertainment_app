@@ -6,8 +6,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { FFContextProvider } from '@harnessio/ff-react-client-sdk';
 
 const App = () => {
-  const reactTarget = { name: 'ReactClientSDK', identifier: 'reactclientsdk' };
-  const sdkApiKey = 'a1d432f6-d208-4fb4-a48d-0b640b691234';
+// This harness account is tied to personal email, not work
+  const reactTarget = { name: 'ReactClientSDK', identifier: 'reactclientsdk' }
+  const sdkApiKey = 'ee880504-341c-493e-bf51-f688cbb3b7f8'
 
   return (
     <FFContextProvider apiKey={sdkApiKey} target={reactTarget}>

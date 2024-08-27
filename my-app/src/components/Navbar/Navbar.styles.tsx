@@ -9,6 +9,7 @@ export const StyledNavbar = styled.nav`
     color: black;
     font-size: 1.5rem;
     text-decoration: none;
-    padding: 25px 15px;
+    padding: 25px 15px 20px;
+    margin: 5px 0;
   }
 `;
